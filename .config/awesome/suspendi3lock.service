@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock X session using i3lock-fancy
+Before=sleep.target
+
+[Service]
+User=grayjack
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/grayjack/.config/awesome/i3lock-fancy/lock
+
+[Install]
+WantedBy=sleep.target

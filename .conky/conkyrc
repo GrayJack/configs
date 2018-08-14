@@ -1,0 +1,166 @@
+conky.config = {
+    font = 'Dungeon:size=8',
+    alignment = 'middle_right',
+    background = true,
+    color1 = '#31F1A7', -- Manjaro Green
+    color2 = '#FFFFFF', -- White
+    color3 = '#F80D0D', -- Red
+    cpu_avg_samples = 2,
+    default_color = 'FFFFFF',
+    draw_shades = false,
+    default_shade_color = '#2d2d2d',
+    double_buffer = true,
+    gap_x = 10,
+    gap_y = 0,
+    minimum_width = 250,
+    maximum_width = 250,
+    no_buffers = yes,
+    text_buffer_size = 2048,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'override',
+    own_window_colour=black,
+    own_window_transparent=false,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_transparent = true,
+    update_interval = 1.5,
+    use_xft = true,
+    use_spacer = yes,
+}
+conky.text = [[
+################################################################################
+##  Date
+################################################################################
+${voffset 10}${goto 5}${font Dungeon:bold:size=12}${time %a}$font${voffset -20}\
+${alignr}${color1}${font Dungeon:size=45}${time %e}$font${color}
+${voffset -20}${goto 5}${font Dungeon:bold:size=12}${time %b}$font ${voffset 2}\
+${font Dungeon:bold:size=20}${time %Y}$font
+${font Dungeon:bold:size=8}
+#
+$hr
+#
+################################################################################
+##  OS, Kernel, Uptime
+################################################################################
+${color1}${font ConkyColors:size=14}a${font}
+${font Dungeon:bold:size=8}\
+${voffset 10}${color2}${execi 10000 awk -F= '/TION/ \
+{print $2}' /etc/lsb-release |sed 's/"//g'} ${execi 10000 awk -F= '/EASE=/ \
+{printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
+${color1}Kernel: ${color2}${kernel}-${machine}
+#
+${voffset 10}#$alignc${execi 86400 whoami}@${nodename}
+${color1}Uptime: ${color2}${uptime_short}
+#
+$hr
+#
+################################################################################
+##  CPU Data
+################################################################################
+${color1}${font ConkyColors:size=14}d${font}
+${font Dungeon:bold:size=8}\
+${voffset 10}${color1}CPU:${color2}$alignr$color2$cpu%$color
+$alignc${freq 1}MHz  ${freq 2}MHz  ${freq 3}MHz  ${freq 4}MHz
+${color1}0: ${color2}${cpubar cpu1 5,000}
+${color1}1: ${color2}${cpubar cpu2 5,000}
+${color1}2: ${color2}${cpubar cpu3 5,000}
+${color1}3: ${color2}${cpubar cpu4 5,000}
+# Top 5
+${top name 1}$alignr${top cpu 1} %
+${top name 2}$alignr${top cpu 2} %
+${top name 3}$alignr${top cpu 3} %
+${top name 4}$alignr${top cpu 4} %
+${top name 5}$alignr${top cpu 5} %
+#
+$hr
+#
+################################################################################
+##  RAM and Swap Data
+################################################################################
+${color1}${font ConkyColors:size=14}g${font}
+${font Dungeon:bold:size=8}\
+${voffset 10}${color1}RAM: ${color2}$alignr$color2$mem/$memmax$color
+${memgraph 30,250 31F1A7 F80D0D -t -l}
+${voffset 10}${color1}SWAP:${color2}$alignr$color2$swap/$swapmax$color
+${swapbar 5,250}
+# Top 5
+${top_mem name 1}$alignr${top_mem mem_res 1}
+${top_mem name 2}$alignr${top_mem mem_res 2}
+${top_mem name 3}$alignr${top_mem mem_res 3}
+${top_mem name 4}$alignr${top_mem mem_res 4}
+${top_mem name 5}$alignr${top_mem mem_res 5}
+#
+$hr
+#
+################################################################################
+##  Storage
+################################################################################
+${color1}${font ConkyColors:size=14}i${font}
+${font Dungeon:bold:size=8}\
+${voffset 10}${color3}Root$alignr$color2${fs_used /}/${fs_size /}$color
+${fs_bar 5,250 /}
+${color1}R/W: $color2${diskio_read nvme0n1}${goto 125}/${alignr}\
+${diskio_write nvme0n1}$color
+
+${color1}Home:$alignr$color2${fs_used /mnt/grayjack}/${fs_size /mnt/grayjack}$color
+${fs_bar 5,250 /mnt/grayjack}
+${color1}R/W: ${color2}${diskio_read sda1}${goto 125}/${alignr}${diskio_write sda1}\
+$color
+
+${color1}Var:$alignr$color2${fs_used /var}/${fs_size /var}$color
+${fs_bar 5,250 /var}
+${color1}R/W: ${color2}${diskio_read sda2}${goto 125}/${alignr}${diskio_write sda2}\
+$color
+#
+$hr
+#
+################################################################################
+##  Network Status
+################################################################################
+${color1}${font ConkyColors:size=14}k${font}
+${font Dungeon:bold:size=8}\
+# Wired - Always show... not that I like, but if conditionals on conky is shitty
+${if_up enp1s0f1}\
+${color1}${voffset 10}Cable: $color2 Down $color2${downspeedf enp1s0f1} KiB\
+${alignr}${upspeedf enp1s0f1}KiB$color Up
+${endif}\
+# Wireless - Show only if driver is up running
+${if_up wlp2s0}\
+${color1}Wi-Fi:  $color2 Down $color2${downspeedf wlp2s0} KiB${alignr}\
+${upspeedf wlp2s0}KiB$color Up
+# ${color1}Signal: ${color2}${wireless_link_bar 5,000 wlp2s0}
+${endif}\
+#
+$hr
+#
+################################################################################
+##  Network Ports
+################################################################################
+${voffset 10}${goto 5}${color1}Open ports: ${color2}${tcp_portmon 1 65535 count}
+${voffset 10}${color1}URL${alignr}PORT${color2}
+${tcp_portmon 1 65535 rip  0}$alignr${tcp_portmon 1 65535 rport  0}
+${tcp_portmon 1 65535 rip  1}$alignr${tcp_portmon 1 65535 rport  1}
+${tcp_portmon 1 65535 rip  2}$alignr${tcp_portmon 1 65535 rport  2}
+${tcp_portmon 1 65535 rip  3}$alignr${tcp_portmon 1 65535 rport  3}
+${tcp_portmon 1 65535 rip  4}$alignr${tcp_portmon 1 65535 rport  4}
+# ${tcp_portmon 1 65535 rip  5}$alignr${tcp_portmon 1 65535 rport  5}
+#
+#
+#
+#
+################################################################################
+##  Things I Keep Forgetting 
+##
+##  
+##  Conky info:
+##   - Settings: http://conky.sourceforge.net/config_settings.html
+##   - Variables: http://conky.sourceforge.net/variables.html
+##   - Variables example: http://www.ifxgroup.net/conky.htm
+##
+##  \ -> Line break without affecting variables
+##
+##  If causes is shitty on conky configuration!!! Avoid if possible!!!
+################################################################################
+]]

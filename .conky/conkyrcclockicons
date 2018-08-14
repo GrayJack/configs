@@ -1,0 +1,45 @@
+conky.config = {
+    font = 'Dungeon:size=8',
+    alignment = 'top_left',
+    background = true,
+    color1 = '#31F1A7',
+    color2 = '#FFFFFF',
+    color3 = '#F80D0D',
+    cpu_avg_samples = 2,
+    default_color = 'FFFFFF',
+    draw_shades = false,
+    default_shade_color = '#2d2d2d',
+    double_buffer = true,
+    gap_x = 10,
+    gap_y = 25,
+    minimum_width = 500,
+    maximum_width = 500,
+    no_buffers = yes,
+    text_buffer_size = 2048,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'normal',
+    own_window_colour=black,
+    own_window_transparent=false,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_transparent = true,
+    update_interval = 1.5,
+    use_xft = true,
+    use_spacer = yes,
+    lua_load  = '~/.conky/scripts/clock_rings.lua',
+    lua_draw_hook_pre = 'clock_rings'
+} 
+conky.text = [[
+#${goto 40}${voffset -35}${font ConkyColors:size=15}i${font}\
+#${goto 177}${voffset 18}${font ConkyColors:size=15}6${font}\
+#${goto 230}${voffset -38}${font ConkyColors:size=15}l${font}
+${font ConkyColors:size=14}d${font}
+#${voffset 42}${goto 104}${font ConkyColors:size=15}g${font}
+#${goto 177}${voffset 15}${font ConkyColors:size=15}e${font}
+#${goto 150}${voffset 68}${font ConkyColors:size=15}k${font}
+#${voffset -176}${goto 275}${hr 2}
+#${voffset 50}${goto 275}${hr 2}
+
+]]

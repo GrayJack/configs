@@ -1,0 +1,86 @@
+conky.config = {
+    font = 'Hack:bold:size=8',
+    alignment = 'bottom_left',
+    background = true,
+    color1 = '#31F1A7',
+    color2 = '#FFFFFF',
+    color3 = '#F80D0D',
+    cpu_avg_samples = 2,
+    default_color = 'FFFFFF',
+    draw_shades = false,
+    default_shade_color = '#2d2d2d',
+    double_buffer = true,
+    gap_x = 10,
+    gap_y = 25,
+    minimum_width = 250,
+    maximum_width = 250,
+    no_buffers = yes,
+    text_buffer_size = 2048,
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'normal',
+    own_window_colour=black,
+    own_window_transparent=false,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_transparent = true,
+    update_interval = 1.5,
+    use_xft = true,
+    use_spacer = yes,
+}
+conky.text = [[
+################################################################################
+##  Kwin shortcuts
+################################################################################
+${voffset 10}${color1}KWin:${color2}$font
+Tile to Bottom${alignr}Meta+B
+Tile to Bottom Left${alignr}Meta+V
+Tile to Bottom Right${alignr}Meta+N
+Tile to Left${alignr}Meta+G
+Tile to Right${alignr}Meta+J
+Tile to Top${alignr}Meta+Y
+Tile to Top Left${alignr}Meta+T
+Tile to Top Right${alignr}Meta+U
+
+Close Window${alignr}Alt+F4
+Kill Window${alignr}Ctrl+Alt+Esc
+Suspend Compositing${alignr}Alt+Shift+F12
+
+Switch Desktop${alignr}Ctrl+[F1-F4]
+Show Desktop Grid${alignr}Ctrl+F8
+Show All Windows(Current Desktop)${alignr}Ctrl+F9
+Show All Windows(All Desktops)${alignr}Ctrl+F10
+Show Desktop${alignr}Ctrl+F12
+#
+$hr
+#
+################################################################################
+##  Session shortcuts
+################################################################################
+${voffset 10}${color1}Session:${color2}$font
+Log Out${alignr}Ctrl+Alt+Del
+Lock${alignr}Ctrl+Alt+L
+Force Halt${alignr}Ctrl+Alt+Shift+PgDown
+Force Reboot${alignr}Ctrl+Alt+Shift+PgUp
+#
+$hr
+#
+################################################################################
+##  Plasma shortcuts
+################################################################################
+${voffset 10}${color1}Plasma:${color2}$font
+Dashboard${alignr}Meta
+Activities${alignr}Meta+Q
+#
+$hr
+#
+################################################################################
+##  Misc
+################################################################################
+${voffset 10}${color1}Others:${color2}$font
+DropDown Terminal${alignr}F12
+Terminal${alignr}Meta+Enter
+#
+#$hr
+]] 
