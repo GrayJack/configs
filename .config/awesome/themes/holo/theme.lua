@@ -180,28 +180,27 @@ musicwidget:buttons(my_table.join(awful.button({ }, 1,
 function () awful.spawn(theme.musicplr) end)))
 prev_icon:buttons(my_table.join(awful.button({}, 1,
 function ()
-    awful.spawn.with_shell("mpc prev")
+    os.execute("mpc prev")
     theme.mpd.update()
 end)))
 next_icon:buttons(my_table.join(awful.button({}, 1,
 function ()
-    awful.spawn.with_shell("mpc next")
+    os.execute("mpc next")
     theme.mpd.update()
 end)))
 stop_icon:buttons(my_table.join(awful.button({}, 1,
 function ()
     play_pause_icon:set_image(theme.play)
-    awful.spawn.with_shell("mpc stop")
+    os.execute("mpc stop")
     theme.mpd.update()
 end)))
 play_pause_icon:buttons(my_table.join(awful.button({}, 1,
 function ()
-    awful.spawn.with_shell("mpc toggle")
+    os.execute("mpc toggle")
     theme.mpd.update()
 end)))
 
 -- Battery
---[[
 local bat = lain.widget.bat({
     settings = function()
         bat_header = " Bat "
@@ -212,7 +211,6 @@ local bat = lain.widget.bat({
         widget:set_markup(markup.font(theme.font, markup(blue, bat_header) .. bat_p))
     end
 })
---]]
 
 --  fs
 theme.fs = lain.widget.fs({

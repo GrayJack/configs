@@ -23,22 +23,23 @@ theme.dir                                       = os.getenv("HOME") .. "/.config
 theme.icon_theme                                = "Papirus-Adapta-Nokto"
 theme.wallpaper                                 = pywal.wallpaper
 theme.font                                      = "Knack 10"
-theme.fg_normal                                 = "#FEFEFE"
-theme.fg_focus                                  = "#32D6FF"
+theme.white                                     = "#FEFEFE"
+theme.fg_normal                                 = pywal.color7 -- OLD "#FEFEFE"
+theme.fg_focus                                  = pywal.color5 -- OLD "#32D6FF"
 theme.fg_urgent                                 = "#C83F11"
 theme.bg_normal                                 = "#222222"
 theme.bg_focus                                  = "#1E2320"
 theme.bg_urgent                                 = "#3F3F3F"
-theme.bg_systray                                = pywal.color8 --"#696969"
-theme.taglist_fg_focus                          = "#00CCFF"
+theme.bg_systray                                = pywal.color8 -- OLD "#696969"
+theme.taglist_fg_focus                          = pywal.color13 -- OLD #00CCFF"
 theme.tasklist_bg_focus                         = "#222222"
-theme.tasklist_fg_focus                         = "#00CCFF"
+theme.tasklist_fg_focus                         = pywal.color14 -- OLD #00CCFF"
 theme.border_width                              = 1
 theme.border_normal                             = "#3F3F3F"
 theme.border_focus                              = "#6F6F6F"
 theme.border_marked                             = "#CC9393"
-theme.titlebar_bg_focus                         = "#3F3F3F"
-theme.titlebar_bg_normal                        = "#3F3F3F"
+--theme.titlebar_bg_focus                         = "#3F3F3F"
+--theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
@@ -108,11 +109,13 @@ theme.titlebar_maximized_button_normal_inactive = theme.dir .. "/icons/titlebar/
 local markup = lain.util.markup
 local separators = lain.util.separators
 
-local awesomeicon = wibox.widget.imagebox(theme.manjaro_icon)
+-- Launcher
+local mylauncher = awful.widget.button({ image = theme.manjaro_icon })
+mylauncher:connect_signal("button::press", function() awful.util.mymainmenu:toggle() end)
 
 -- Textclock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local clock = awful.widget.textclock("%H:%M")
+local clock = wibox.widget.textclock("%H:%M")
 clock.font = theme.font
 
 -- Binary clock
@@ -125,7 +128,7 @@ local binclock = require("themes.powerarrow.binclock"){
 
 -- Calendar
 theme.cal = lain.widget.calendar({
-    --cal = "cal --color=always",
+    -- cal = "cal --color=always",
     attach_to = { clock },
     notification_preset = {
         font = "Knack 11",
@@ -364,23 +367,8 @@ function theme.at_screen_connect(s)
     gears.wallpaper.maximized(wallpaper, s, true)
 
     -- Tags
-    awful.tag(awful.util.tagnames, s, awful.layout.layouts)
-    
-    -- Menu (NOT WORKING YET)
-    s.mymenu = freedesktop.menu.build({
-        icon_size = theme.menu_height or 16,
-        before = {
-            { "log out", function() awesome.quit() end, "/usr/share/icons/Arc-Maia/actions/24@2x/system-log-out.png" },
-            { "suspend", "systemctl suspend", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-suspend.png" },
-            { "hibernate", "systemctl hibernate", "/usr/share/icons/Arc-Maia/actions/24@2x/gnome-session-hibernate.png" },
-            { "reboot", "systemctl reboot", "/usr/share/icons/Arc-Maia/actions/24@2x/view-refresh.png" },
-            { "shutdown", "poweroff", "/usr/share/icons/Arc-Maia/actions/24@2x/system-shutdown.png" }
-            -- other triads can be put here
-        },
-        after = {
-            -- other triads can be put here
-        }
-    })
+    awful.tag(awful.util.tagnames, s, awful.layout.layouts[1])
+
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -399,7 +387,7 @@ function theme.at_screen_connect(s)
     s.mytasklist = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, awful.util.tasklist_buttons)
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 16, bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 16, bg = theme.bg_normal, fg = theme.white })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -407,7 +395,7 @@ function theme.at_screen_connect(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             --spr,
-            awesomeicon,
+            mylauncher,
             spr,
             s.mytaglist,
             s.mypromptbox,

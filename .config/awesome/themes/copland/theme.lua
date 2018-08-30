@@ -10,7 +10,7 @@ local lain  = require("lain")
 local awful = require("awful")
 local wibox = require("wibox")
 
-local os = { getenv = os.getenv, setlocale = os.setlocale }
+local os = { execute = os.execute, getenv = os.getenv, setlocale = os.setlocale }
 local awesome, client = awesome, client
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
@@ -135,11 +135,11 @@ theme.mpd = lain.widget.mpd({
     settings = function()
         if mpd_now.state == "play" then
             title = mpd_now.title
-            artist  = " " .. mpd_now.artist  .. markup("#333333", " <span font='Tamzen 2'> </span>|<span font='Tamzen 5'> </span>")
+            artist  = " " .. mpd_now.artist  .. markup("#777777", " <span font='Tamzen 2'> </span>|<span font='Tamzen 5'> </span>")
             mpdicon:set_image(theme.play)
         elseif mpd_now.state == "pause" then
             title = "mpd "
-            artist  = "paused" .. markup("#333333", " |<span font='Tamzen 5'> </span>")
+            artist  = "paused" .. markup("#777777", " |<span font='Tamzen 5'> </span>")
             mpdicon:set_image(theme.pause)
         else
             title  = ""
@@ -168,7 +168,7 @@ local batbar = wibox.widget {
 }
 local batupd = lain.widget.bat({
     settings = function()
-        if bat_now.status == "N/A" or type(bat_now.perc) ~= "number" then return end
+        if (not bat_now.status) or bat_now.status == "N/A" or type(bat_now.perc) ~= "number" then return end
 
         if bat_now.status == "Charging" then
             baticon:set_image(theme.ac)
@@ -214,7 +214,7 @@ local fsbar = wibox.widget {
     ticks_size       = 6,
     widget           = wibox.widget.progressbar,
 }
-theme.fs = lain.widget.fs({
+theme.fs = lain.widget.fs {
     notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Tamzen 10.5" },
     settings  = function()
         if fs_now["/home"].percentage < 90 then
@@ -224,13 +224,13 @@ theme.fs = lain.widget.fs({
         end
         fsbar:set_value(fs_now["/home"].percentage / 100)
     end
-})
+}
 local fsbg = wibox.container.background(fsbar, "#474747", gears.shape.rectangle)
 local fswidget = wibox.container.margin(fsbg, 2, 7, 4, 4)
 
 -- ALSA volume bar
 local volicon = wibox.widget.imagebox(theme.vol)
-theme.volume = lain.widget.alsabar({
+theme.volume = lain.widget.alsabar {
     width = 59, border_width = 0, ticks = true, ticks_size = 6,
     notification_preset = { font = theme.font },
     --togglechannel = "IEC958,3",
@@ -250,26 +250,26 @@ theme.volume = lain.widget.alsabar({
         mute         = red,
         unmute       = theme.fg_normal
     }
-})
+}
 theme.volume.tooltip.wibox.fg = theme.fg_focus
 theme.volume.bar:buttons(my_table.join (
           awful.button({}, 1, function()
-            awful.spawn.with_shell(string.format("%s -e alsamixer", awful.util.terminal))
+            awful.spawn(string.format("%s -e alsamixer", awful.util.terminal))
           end),
           awful.button({}, 2, function()
-            awful.spawn(string.format("%s set %s 100%%", theme.volume.cmd, theme.volume.channel))
+            os.execute(string.format("%s set %s 100%%", theme.volume.cmd, theme.volume.channel))
             theme.volume.update()
           end),
           awful.button({}, 3, function()
-            awful.spawn(string.format("%s set %s toggle", theme.volume.cmd, theme.volume.togglechannel or theme.volume.channel))
+            os.execute(string.format("%s set %s toggle", theme.volume.cmd, theme.volume.togglechannel or theme.volume.channel))
             theme.volume.update()
           end),
           awful.button({}, 4, function()
-            awful.spawn(string.format("%s set %s 1%%+", theme.volume.cmd, theme.volume.channel))
+            os.execute(string.format("%s set %s 1%%+", theme.volume.cmd, theme.volume.channel))
             theme.volume.update()
           end),
           awful.button({}, 5, function()
-            awful.spawn(string.format("%s set %s 1%%-", theme.volume.cmd, theme.volume.channel))
+            os.execute(string.format("%s set %s 1%%-", theme.volume.cmd, theme.volume.channel))
             theme.volume.update()
           end)
 ))
@@ -285,7 +285,7 @@ theme.weather = lain.widget.weather({
 local first     = wibox.widget.textbox(markup.font("Tamzen 3", " "))
 local spr       = wibox.widget.textbox(' ')
 local small_spr = wibox.widget.textbox(markup.font("Tamzen 4", " "))
-local bar_spr   = wibox.widget.textbox(markup.font("Tamzen 3", " ") .. markup.fontfg(theme.font, "#333333", "|") .. markup.font("Tamzen 5", " "))
+local bar_spr   = wibox.widget.textbox(markup.font("Tamzen 3", " ") .. markup.fontfg(theme.font, "#777777", "|") .. markup.font("Tamzen 5", " "))
 
 -- Eminent-like task filtering
 local orig_filter = awful.widget.taglist.filter.all

@@ -15,9 +15,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
-theme.icon_theme                                = "Papirus-Adapta-Nokto"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Knack 10"
+theme.font                                      = "xos4 Terminus 9"
 theme.fg_normal                                 = "#FEFEFE"
 theme.fg_focus                                  = "#32D6FF"
 theme.fg_urgent                                 = "#C83F11"
@@ -36,7 +35,7 @@ theme.titlebar_bg_normal                        = "#3F3F3F"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
-theme.menu_height                               = 20
+theme.menu_height                               = 16
 theme.menu_width                                = 140
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.awesome_icon                              = theme.dir .. "/icons/awesome.png"
@@ -113,7 +112,7 @@ theme.cal = lain.widget.calendar({
     --cal = "cal --color=always",
     attach_to = { binclock.widget },
     notification_preset = {
-        font = "Knack 11",
+        font = "xos4 Terminus 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -129,7 +128,7 @@ task:buttons(my_table.join(awful.button({}, 1, lain.widget.contrib.task.prompt))
 
 -- Scissors (xsel copy and paste)
 local scissors = wibox.widget.imagebox(theme.widget_scissors)
-scissors:buttons(my_table.join(awful.button({}, 1, function() awful.spawn("xsel | xsel -i -b") end)))
+scissors:buttons(my_table.join(awful.button({}, 1, function() awful.spawn.with_shell("xsel | xsel -i -b") end)))
 
 -- Mail IMAP check
 local mailicon = wibox.widget.imagebox(theme.widget_mail)
@@ -155,7 +154,7 @@ local mail = lain.widget.imap({
 -- ALSA volume
 theme.volume = lain.widget.alsabar({
     --togglechannel = "IEC958,3",
-    notification_preset = { font = "Knack 11", fg = theme.fg_normal },
+    notification_preset = { font = "xos4 Terminus 10", fg = theme.fg_normal },
 })
 
 -- MPD
@@ -164,15 +163,15 @@ local mpdicon = wibox.widget.imagebox(theme.widget_music)
 mpdicon:buttons(my_table.join(
     awful.button({ modkey }, 1, function () awful.spawn.with_shell(musicplr) end),
     awful.button({ }, 1, function ()
-        awful.spawn.with_shell("mpc prev")
+        os.execute("mpc prev")
         theme.mpd.update()
     end),
     awful.button({ }, 2, function ()
-        awful.spawn.with_shell("mpc toggle")
+        os.execute("mpc toggle")
         theme.mpd.update()
     end),
     awful.button({ }, 3, function ()
-        awful.spawn.with_shell("mpc next")
+        os.execute("mpc next")
         theme.mpd.update()
     end)))
 theme.mpd = lain.widget.mpd({
@@ -208,7 +207,7 @@ local cpu = lain.widget.cpu({
     end
 })
 
--- Coretemp (lm_sensors, per core)
+--[[ Coretemp (lm_sensors, per core)
 local tempwidget = awful.widget.watch({awful.util.shell, '-c', 'sensors | grep Core'}, 30,
 function(widget, stdout)
     local temps = ""
@@ -230,7 +229,7 @@ local tempicon = wibox.widget.imagebox(theme.widget_temp)
 -- / fs
 local fsicon = wibox.widget.imagebox(theme.widget_hdd)
 theme.fs = lain.widget.fs({
-    notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Knack 11" },
+    notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "xos4 Terminus 10" },
     settings = function()
         local fsp = string.format(" %3.2f %s ", fs_now["/"].free, fs_now["/"].units)
         widget:set_markup(markup.font(theme.font, fsp))
@@ -241,7 +240,7 @@ theme.fs = lain.widget.fs({
 local baticon = wibox.widget.imagebox(theme.widget_battery)
 local bat = lain.widget.bat({
     settings = function()
-        if bat_now.status ~= "N/A" then
+        if bat_now.status and bat_now.status ~= "N/A" then
             if bat_now.ac_status == 1 then
                 widget:set_markup(markup.font(theme.font, " AC "))
                 baticon:set_image(theme.widget_ac)
@@ -356,13 +355,13 @@ function theme.at_screen_connect(s)
             pl(binclock.widget, "#777E76"),
             --]]
             -- using separators
-            --arrow(theme.bg_normal, "#343434"),
-            --wibox.container.background(wibox.container.margin(wibox.widget { mailicon, mail and mail.widget, layout = wibox.layout.align.horizontal }, 4, 7), "#343434"),
             arrow(theme.bg_normal, "#343434"),
-            wibox.container.background(wibox.container.margin(task, 3, 7), "#343434"),
+            wibox.container.background(wibox.container.margin(wibox.widget { mailicon, mail and mail.widget, layout = wibox.layout.align.horizontal }, 4, 7), "#343434"),
             arrow("#343434", theme.bg_normal),
             wibox.container.background(wibox.container.margin(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, 3, 6), theme.bg_focus),
-            arrow(theme.bg_focus, "#777E76"),
+            arrow(theme.bg_normal, "#343434"),
+            wibox.container.background(wibox.container.margin(task, 3, 7), "#343434"),
+            arrow("#343434", "#777E76"),
             wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, 2, 3), "#777E76"),
             arrow("#777E76", "#4B696D"),
             wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, 3, 4), "#4B696D"),
