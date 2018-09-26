@@ -61,7 +61,16 @@ CASE_SENSITIVE="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Remove archlinux if not arch based distro or pacBSD
-plugins=(git git-extra zsh-completions zsh-autosuggestions zsh-syntax-highlighting archlinux history sudo lol)
+plugins=(git 
+         git-extra 
+         zsh-completions 
+         zsh-autosuggestions 
+         zsh-syntax-highlighting 
+         archlinux 
+         history 
+         sudo 
+         lol
+)
 
 autoload -U compinit && compinit
 
@@ -111,11 +120,16 @@ export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/defa
 # More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 if [[ "$OSTYPE" == linux* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable root_indicator background_jobs public_ip context time)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs public_ip root_indicator context_joined command_execution_time time)
     POWERLEVEL9K_DIR_HOME_BACKGROUND='cyan'
     POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='cyan'
     POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
     POWERLEVEL9K_STATUS_OK_BACKGROUND='023'
+    POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
+    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
+    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=7
 elif [[ "$OSTYPE" == freebsd* ]]; then
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable root_indicator background_jobs context time)
     POWERLEVEL9K_DIR_HOME_BACKGROUND='009'
@@ -127,17 +141,16 @@ fi
 POWERLEVEL9K_PUBLIC_IP_BACKGROUND='cyan'
 POWERLEVEL9K_PUBLIC_IP_FOREGROUND='black'
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
-#POWERLEVEL9K_OS_ICON=$'\uf312'
 
 # fix icons cut on konsole/yakuake 
 # comment if on GTK since it's not needed
-for key in ${(k)icons[@]}
-do
-    if [[ ! $key =~ 'SEPARATOR' ]]
-    then
-        icons[$key]="${icons[$key]} "
-    fi
-done
+#for key in ${(k)icons[@]}
+#do
+#    if [[ ! $key =~ 'SEPARATOR' ]]
+#    then
+#        icons[$key]="${icons[$key]} "
+#    fi
+#done
 
 # Highlights
 # highlighting
