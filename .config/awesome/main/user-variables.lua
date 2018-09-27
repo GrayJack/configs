@@ -2,7 +2,7 @@
 
 modkey       = "Mod4"
 altkey       = "Mod1"
-terminal     = "konsole"
+terminal     = "alacritty"
 editor       = os.getenv("EDITOR") or "nvim"
 gui_editor   = "kate"
 gui_editor2  = "atom"
