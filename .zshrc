@@ -1,11 +1,11 @@
-export TERM="xterm-256color" 
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/$USER/.oh-my-zsh
 
-# This need to be setup before ZSH_THEME for PowerLevel9k theme, 
+# This need to be setup before ZSH_THEME for PowerLevel9k theme,
 # comment if this theme is not in use
 # If you use a normal powerline font you have to comment all 3
 # Only choose the one you're using
@@ -40,7 +40,7 @@ CASE_SENSITIVE="false"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# Uncomment the following line to display 160 dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -61,14 +61,17 @@ CASE_SENSITIVE="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # Remove archlinux if not arch based distro or pacBSD
-plugins=(git 
-         git-extra 
-         zsh-completions 
-         zsh-autosuggestions 
-         zsh-syntax-highlighting 
-         archlinux 
-         history 
-         sudo 
+plugins=(git
+         git-extra
+         zsh-completions
+         zsh-autosuggestions
+         zsh-syntax-highlighting
+         archlinux
+	 extract
+         history
+	 history-substring-search
+         sudo
+	 rand-quote
          lol
 )
 
@@ -83,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
+# Prefer160 editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
 else
@@ -109,7 +112,7 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias restart-bluetooth="sudo systemctl restart bluetooth"
 fi
 
-# Library path for some programs 
+# Library path for some programs
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 
@@ -129,20 +132,20 @@ if [[ "$OSTYPE" == linux* ]]; then
     POWERLEVEL9K_PROMPT_ON_NEWLINE=true
     POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=7
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
 elif [[ "$OSTYPE" == freebsd* ]]; then
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable root_indicator background_jobs context time)
     POWERLEVEL9K_DIR_HOME_BACKGROUND='009'
     POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='009'
     POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
-else 
+else
     POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable root_indicator background_jobs context time)
 fi
 POWERLEVEL9K_PUBLIC_IP_BACKGROUND='cyan'
 POWERLEVEL9K_PUBLIC_IP_FOREGROUND='black'
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
 
-# fix icons cut on konsole/yakuake 
+# fix icons cut on konsole/yakuake
 # comment if on GTK since it's not needed
 #for key in ${(k)icons[@]}
 #do
@@ -153,49 +156,59 @@ POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113 '
 #done
 
 # Highlights
+#
+# Colors
+# Magenta=165
+# Cyan=030
+# Yellow=178
+# Red=160
+# Blue=033
+# Green=028
+# Orange=208
+# Purple=093
 # highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 # brackets
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=red,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=yellow,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=033,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=160,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=178,bold'
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=165,bold'
 # cursor
-#ZSH_HIGHLIGHT_STYLES[cursor]='bg=blue'
+#ZSH_HIGHLIGHT_STYLES[cursor]='bg=033'
 # main
 # default
 ZSH_HIGHLIGHT_STYLES[default]='none'
 # unknown
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=160'
 # command
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=magenta,bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[command]='fg=green'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=165,bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=208'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=028,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=028,bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=028'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=208,underline' #DarkOrange
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=yellow'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=178'
+ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=028'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=033'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=033,underline'
 # path
 ZSH_HIGHLIGHT_STYLES[path]='fg=178' #Yellow
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=178'
 ZSH_HIGHLIGHT_STYLES[path_approx]='fg=178'
 # shell
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=cyan'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[assign]='fg=magenta'
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=092,underline'
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=092'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=092'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=030'
+ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=033'
+ZSH_HIGHLIGHT_STYLES[assign]='fg=165'
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=093,underline'
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=093,underline'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=093'
 # quotes
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=magenta,underline'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=magenta'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=165,underline'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=165'
 # pattern example
-#ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+#ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=160')
 # root example
-#ZSH_HIGHLIGHT_STYLES[root]='bg=red'
+#ZSH_HIGHLIGHT_STYLES[root]='bg=160'
 
 # Remove the comment below if you're using tilix terminal to avoid a little problem
 #if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
