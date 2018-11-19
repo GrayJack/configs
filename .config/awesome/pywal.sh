@@ -8,6 +8,8 @@ wal -i ~/Pictures/Wallpapers/8K6mZ1j.png
 #wal -i ~/Pictures/Wallpapers/lights-in-the-glass.jpg
 #wal -i ~/Pictures/Wallpapers/Lakeside_Sunset_2560x1440.jpg
 #wal -i ~/Pictures/Wallpapers/tguggenmos-Pilz.png
+#wal -i ~/Pictures/Wallpapers/big_school.png
+#wal -i ~/Pictures/Wallpapers/pixel-art-wallpaper-hd-of-androids-dark-valley.jpg
+#wal -i ~/Pictures/Wallpapers/daxwallpaper.jpg
 cp ~/.cache/wal/colors.lua ~/.config/awesome/themes/powerarrow/pywal.lua
 cp ~/.cache/wal/colors-konsole.colorscheme ~/.local/share/konsole/colors-konsole.colorscheme
-

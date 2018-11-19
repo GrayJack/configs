@@ -66,5 +66,8 @@ globalkeys = my_table.join(globalkeys,
                 c:raise()
             end
         end,
-        {description = "Restore minimized", group = "Client: global"})
+        {description = "Restore minimized", group = "Client: global"}),
+
+    awful.key({modkey,      }, "c", collision.split,
+        {description = "Split into other layouts", group = "Client: global"})
 )

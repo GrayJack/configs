@@ -5,10 +5,10 @@ local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 
 globalkeys = my_table.join(globalkeys,
     -- Tag browsing
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
-            {description = "View previous", group = "Awesome: tag"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
-            {description = "View next", group = "Awesome: tag"}),
+    -- awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    --         {description = "View previous", group = "Awesome: tag"}),
+    -- awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    --         {description = "View next", group = "Awesome: tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
             {description = "Go back", group = "Awesome: tag"}),
 
@@ -29,9 +29,9 @@ globalkeys = my_table.join(globalkeys,
             {description = "Add new tag", group = "Awesome: tag"}),
     awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end,
             {description = "Rename tag", group = "Awesome: tag"}),
-    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(-1) end,
+    awful.key({ modkey, "Shift" }, "j", function () lain.util.move_tag(-1) end,
             {description = "Move tag to the left", group = "Awesome: tag"}),
-    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(1) end,
+    awful.key({ modkey, "Shift" }, "k", function () lain.util.move_tag(1) end,
             {description = "Move tag to the right", group = "Awesome: tag"}),
     awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end,
             {description = "Delete tag", group = "Awesome: tag"})

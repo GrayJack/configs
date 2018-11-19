@@ -1,9 +1,13 @@
 local awful    = require("awful")
                  require("awful.autofocus")
 local lain     = require("lain")
+-- local dynamite      = require("dynamite")
 local treetile =  require("treetile")
 
-awful.layout.layouts = {
+awful.layout.layouts =  {
+    -- require("dynamite.suit.treesome"),
+    -- require("dynamite.layout.stack")
+    -- dynamite.manual,
     treetile,
     --awful.layout.suit.tile,
     awful.layout.suit.floating,

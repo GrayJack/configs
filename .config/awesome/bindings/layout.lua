@@ -42,9 +42,5 @@ globalkeys = my_table.join(globalkeys,
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
             {description = "Decrease the number of columns", group = "Awesome: layout"}),
     awful.key({ altkey,           }, "l", function () awful.layout.inc( 1)                end,
-            {description = "Select next", group = "Awesome: layout"}),
-    awful.key({ modkey,             }, "v", treetile.vertical,
-            {description = "Treetile: Next split is vertical", group = "Awesome: layout"}),
-    awful.key({ modkey,             }, "h", treetile.horizontal,
-            {description = "Treetile: Next split is horizontal", group = "Awesome: layout"})
+            {description = "Select next", group = "Awesome: layout"})
 )
