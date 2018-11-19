@@ -34,6 +34,18 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Z
+. /usr/share/z/z.sh
+
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
@@ -53,18 +65,21 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias restart-bluetooth="sudo systemctl restart bluetooth"
 fi
 
+# Cargo target dir
+export CARGO_TARGET_DIR=~/MySources/cargo_target
+
 # Library path for some programs
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 
 # Path to programs
-# export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin
+export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin:/home/grayjack/.local/bin
 
 # PowerLevel9k config
 # More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 if [[ "$OSTYPE" == linux* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs public_ip root_indicator context_joined command_execution_time time)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
     POWERLEVEL9K_DIR_HOME_BACKGROUND='cyan'
     POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='cyan'
     POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
@@ -75,7 +90,7 @@ if [[ "$OSTYPE" == linux* ]]; then
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
 elif [[ "$OSTYPE" == freebsd* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time time)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
     POWERLEVEL9K_DIR_HOME_BACKGROUND='009'
     POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='009'
     POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
@@ -85,7 +100,7 @@ elif [[ "$OSTYPE" == freebsd* ]]; then
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
 else
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time time)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
 fi
 POWERLEVEL9K_PUBLIC_IP_BACKGROUND='cyan'
 POWERLEVEL9K_PUBLIC_IP_FOREGROUND='black'

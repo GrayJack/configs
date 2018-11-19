@@ -11,7 +11,7 @@ globalkeys = my_table.join(globalkeys,
     -- User programs
     awful.key({ modkey,           }, "e",     function () awful.util.spawn(filemanager)     end,
             {description = "Launch filemanager", group = "Awesome: launcher"}),
-    awful.key({ modkey,           }, "q", function () awful.spawn(filemanager2) end,
+    awful.key({ modkey,           }, "q", function () awful.spawn(filemanager) end,
             {description = "Launch filemanager2", group = "Awesome: launcher"}),
     awful.key({ modkey, Shift     }, "b",     function () awful.util.spawn(browser)   end,
             {description = "Launch Browser", group = "Awesome: launcher"}),
