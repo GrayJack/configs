@@ -117,8 +117,8 @@ render_timer: false
 colors:
   # Default colors
   primary:
-    background: '0x0c100d'
-    foreground: '0xb3bab2'
+    background: '0x0E0C0D'
+    foreground: '0xc6c1cb'
 
     # (Optional) Bright and Dim foreground colors
     #
@@ -132,29 +132,29 @@ colors:
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0x000000'
-    cursor: '0xb3bab2'
+    cursor: '0xc6c1cb'
 
   # Normal colors
   normal:
-    black:   '0x0c100d'
-    red:     '0x49524A'
-    green:   '0x586158'
-    yellow:  '0x5F625D'
-    blue:    '0x687067'
-    magenta: '0x944E4B'
-    cyan:    '0x5A856A'
-    white:   '0xb3bab2'
+    black:   '0x0E0C0D'
+    red:     '0x96595C'
+    green:   '0xBC9967'
+    yellow:  '0x275390'
+    blue:    '0x5E6896'
+    magenta: '0x997790'
+    cyan:    '0x6D8BAF'
+    white:   '0xc6c1cb'
 
   # Bright colors
   bright:
-    black:   '0x7d827c'
-    red:     '0x49524A'
-    green:   '0x586158'
-    yellow:  '0x5F625D'
-    blue:    '0x687067'
-    magenta: '0x944E4B'
-    cyan:    '0x5A856A'
-    white:   '0xb3bab2'
+    black:   '0x8a878e'
+    red:     '0x96595C'
+    green:   '0xBC9967'
+    yellow:  '0x275390'
+    blue:    '0x5E6896'
+    magenta: '0x997790'
+    cyan:    '0x6D8BAF'
+    white:   '0xc6c1cb'
 
   # Dim colors (Optional)
   dim:
@@ -218,7 +218,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.80
+background_opacity: 0.85
 
 # Mouse bindings
 #
@@ -300,43 +300,82 @@ live_config_reload: true
 
 # Key bindings
 #
-# Each binding is defined as an object with some properties. Most of the
-# properties are optional. All of the alphabetical keys should have a letter for
-# the `key` value such as `V`. Function keys are probably what you would expect
-# as well (F1, F2, ..). The number keys above the main keyboard are encoded as
-# `Key1`, `Key2`, etc. Keys on the number pad are encoded `Number1`, `Number2`,
-# etc.  These all match the glutin::VirtualKeyCode variants.
+# Key bindings are specified as a list of objects. Each binding will specify
+# a key and modifiers required to trigger it, terminal modes where the binding
+# is applicable, and what should be done when the key binding fires. It can
+# either send a byte sequnce to the running application (`chars`), execute
+# a predefined action (`action`) or fork and execute a specified command plus
+# arguments (`command`).
 #
-# A list with all available `key` names can be found here:
-# https://docs.rs/glutin/*/glutin/enum.VirtualKeyCode.html#variants
+# Example:
+#   `- { key: V, mods: Command, action: Paste }`
 #
-# Possible values for `mods`
-# `Command`, `Super` refer to the super/command/windows key
-# `Control` for the control key
-# `Shift` for the Shift key
-# `Alt` and `Option` refer to alt/option
+# Available fields:
+#   - key
+#   - mods (optional)
+#   - chars | action | command (exactly one required)
+#   - mode (optional)
 #
-# mods may be combined with a `|`. For example, requiring control and shift
-# looks like:
+# Values for `key`:
+#   - `A` -> `Z`
+#   - `F1` -> `F12`
+#   - `Key1` -> `Key0`
 #
-# mods: Control|Shift
+#   A full list with available key codes can be found here:
+#   https://docs.rs/glutin/*/glutin/enum.VirtualKeyCode.html#variants
 #
-# The parser is currently quite sensitive to whitespace and capitalization -
-# capitalization must match exactly, and piped items must not have whitespace
-# around them.
+#   Instead of using the name of the keys, the `key` field also supports using
+#   the scancode of the desired key. Scancodes have to be specified as a
+#   decimal number.
+#   This command will allow you to display the hex scancodes for certain keys:
+#     `showkey --scancodes`
 #
-# Either an `action`, `chars`, or `command` field must be present.
-#   `action` must be one of `Paste`, `PasteSelection`, `Copy`, or `Quit`.
-#   `chars` writes the specified string every time that binding is activated.
-#     These should generally be escape sequences, but they can be configured to
-#     send arbitrary strings of bytes.
-#   `command` must be a map containing a `program` string, and `args` array of
-#     strings. For example:
-#     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
+# Values for `mods`:
+#   - Command
+#   - Control
+#   - Shift
+#   - Alt
 #
-# Want to add a binding (e.g. "PageUp") but are unsure what the X sequence
-# (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
-# then run `showkey -a` to get the sequence associated to a key combination.
+#   Multiple `mods` can be combined using `|` like this: `mods: Control|Shift`.
+#   Whitespace and capitalization is relevant and must match the example.
+#
+# Values for `chars`:
+#   The `chars` field writes the specified string to the terminal. This makes
+#   it possible to pass escape sequences.
+#   To find escape codes for bindings like `PageUp` ("\x1b[5~"), you can run
+#   the command `showkey -a` outside of tmux.
+#   Note that applications use terminfo to map escape sequences back to
+#   keys. It is therefore required to update the terminfo when
+#   changing an escape sequence.
+#
+# Values for `action`:
+#   - Paste
+#   - PasteSelection
+#   - Copy
+#   - IncreaseFontSize
+#   - DecreaseFontSize
+#   - ResetFontSize
+#   - ScrollPageUp
+#   - ScrollPageDown
+#   - ScrollToTop
+#   - ScrollToBottom
+#   - ClearHistory
+#   - Hide
+#   - Quit
+#   - ClearLogNotice
+#
+# Values for `command`:
+#   The `command` field must be a map containing a `program` string and
+#   an `args` array of command line parameter strings.
+#
+#   Example:
+#       `command: { program: "alacritty", args: ["-e", "vttest"] }`
+#
+# Values for `mode`:
+#   - ~AppCursor
+#   - AppCursor
+#   - ~AppKeypad
+#   - AppKeypad
 key_bindings:
   - { key: V,        mods: Control|Shift,    action: Paste               }
   - { key: C,        mods: Control|Shift,    action: Copy                }
@@ -348,6 +387,8 @@ key_bindings:
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
   - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+  - { key: L,        mods: Control, action: ClearLogNotice               }
+  - { key: L,        mods: Control, chars: "\x0c"                        }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
