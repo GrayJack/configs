@@ -156,7 +156,7 @@ call s:h("String",        { "fg": s:yellow })
 call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
 call s:h("StorageClass",  { "fg": s:aqua })
-call s:h("Typedef",       { "fg": s:aqua })
+call s:h("Typedef",       { "fg": s:aqua }) " aqua
     
 call s:h("Identifier",    { "fg": s:green })
 call s:h("Function",      { "fg": s:green })
@@ -164,7 +164,7 @@ call s:h("Function",      { "fg": s:green })
 call s:h("Statement",     { "fg": s:pink })
 call s:h("Operator",      { "fg": s:pink })
 call s:h("Label",         { "fg": s:pink })
-call s:h("Keyword",       { "fg": s:aqua })
+call s:h("Keyword",       { "fg": s:pink })
 "        Conditional"
 "        Repeat"
 "        Exception"
@@ -178,7 +178,7 @@ call s:h("PreCondit",     { "fg": s:green })
 call s:h("Special",       { "fg": s:purple })
 call s:h("SpecialChar",   { "fg": s:pink })
 call s:h("Delimiter",     { "fg": s:pink })
-call s:h("SpecialComment",{ "fg": s:aqua })
+call s:h("SpecialComment",{ "fg": s:grey }) " aqua
 call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 

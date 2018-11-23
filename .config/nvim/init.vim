@@ -23,74 +23,68 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'junegunn/fzf.vim'
-
 "Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
 Plug 'terryma/vim-multiple-cursors'
-
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
-
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-
 Plug 'airblade/vim-gitgutter'
-
 Plug 'w0rp/ale'
-
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
-
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Rust Plugins
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
 
 Plug 'kana/vim-smartinput'
-
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-
 Plug 'ryanoasis/vim-devicons'
-
 Plug 'lambdalisue/suda.vim'
-
 call plug#end()
 
+" Go to last active tab
+au TabLeave * let g:lasttab = tabpagenr()
+nnoremap <silent> <C-l> :exe "tabn ".g:lasttab<CR>
+vnoremap <silent> <C-l> :exe "tabn ".g:lasttab<CR>
+
+" Copy outside vim
+vnoremap <silent> <C-y> "+y<CR>
 
 " Toggle file tree
-map <C-\> :NERDTreeToggle<CR>
+noremap <C-\> :NERDTreeToggle<CR>
 
 " Toggle tagbar
-nmap <F8> :TagbarToggle<CR> 
+nnoremap <F8> :TagbarToggle<CR> 
 
 " Enable fuzzy files search
-map ; :Files<CR>
+nnoremap ; :Files<CR>
 
 " Suda plugin
 " this let us to do stuff on non permited files when we forget to type sudo first
 " Write file
-cnoremap w!! <bar> :w suda://%<CR>
+cnoremap W!! <bar> :w suda://%<CR>
 " Write and quit file
-cnoremap wq!! <bar> :wq suda://%<CR>
+cnoremap WQ!! <bar> :wq suda://%<CR>
 " Read file
-cnoremap r!! <bar> :r suda://%<CR>
+cnoremap R!! <bar> :r suda://%<CR>
 " Open current file with sudo
-cnoremap e!! <bar> :e suda://%<CR>
+cnoremap E!! <bar> :e suda://%<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup=1
-map <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
+noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
 " Config ale plugin
 let g:ale_linters = {
 \    'rust': ['rls'],
 \    'r': ['lintr'],
-\    'python': ['pyflakes', 'flake8', 'pyls', 'autopep8'],
+\    'python': ['pyflakes', 'yapf'],
 \    'ocaml': ['ols', 'ocamlformat'],
 \    'julia': ['languageserver'],
 \    'c++': ['clangd', 'flawfinder'],
@@ -132,3 +126,7 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
+" Poliglot
+let g:polyglot_disabled = ['python', 'python-ident']
+
