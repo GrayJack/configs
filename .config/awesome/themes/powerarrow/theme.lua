@@ -20,7 +20,7 @@ local pywal = require("themes.powerarrow.pywal")
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
-theme.icon_theme                                = "Papirus-Adapta-Nokto"
+theme.icon_theme                                = "Papirus-Adapta-Nokto-Maia"
 theme.wallpaper                                 = pywal.wallpaper
 theme.font                                      = "Knack 10"
 theme.white                                     = "#FEFEFE"
@@ -127,7 +127,7 @@ local binclock = require("themes.powerarrow.binclock"){
 }
 
 -- Calendar
-theme.cal = lain.widget.calendar({
+theme.cal = lain.widget.cal({
     -- cal = "cal --color=always",
     attach_to = { clock },
     notification_preset = {
@@ -272,6 +272,7 @@ theme.weather = lain.widget.weather({
 
 -- / fs
 local fsicon = wibox.widget.imagebox(theme.widget_hdd)
+-- Should be "local fs"
 theme.fs = lain.widget.fs({
     notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Knack 11" },
     settings = function()
@@ -376,10 +377,11 @@ function theme.at_screen_connect(s)
     -- We need one layoutbox per screen.
     s.mylayoutbox = awful.widget.layoutbox(s)
     s.mylayoutbox:buttons(my_table.join(
-                           awful.button({ }, 1, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 3, function () awful.layout.inc(-1) end),
-                           awful.button({ }, 4, function () awful.layout.inc( 1) end),
-                           awful.button({ }, 5, function () awful.layout.inc(-1) end)))
+                            awful.button({}, 1, function () awful.layout.inc( 1) end),
+                            awful.button({}, 2, function () awful.layout.set( awful.layout.layouts[1] ) end),
+                            awful.button({}, 3, function () awful.layout.inc(-1) end),
+                            awful.button({}, 4, function () awful.layout.inc( 1) end),
+                            awful.button({}, 5, function () awful.layout.inc(-1) end)))
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist(s, awful.widget.taglist.filter.all, awful.util.taglist_buttons)
 
