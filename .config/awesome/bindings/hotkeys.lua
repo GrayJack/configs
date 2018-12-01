@@ -8,6 +8,7 @@ globalkeys = my_table.join(globalkeys,
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
               {description = "Lock screen", group = "Awesome: hotkeys"}),
 
+    --[[ Function keys ]]
     -- Brightness
     awful.key({                   }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 5") end),
     awful.key({                   }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 5") end),
@@ -28,6 +29,9 @@ globalkeys = my_table.join(globalkeys,
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
         end),
+
+    -- Search
+    awful.key({                   }, "XF86Search", function () awful.util.spawn(rofi) end),
 
     -- ALSA volume control
     awful.key({ altkey,           }, "Up",

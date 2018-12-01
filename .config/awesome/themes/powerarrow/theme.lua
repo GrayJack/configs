@@ -239,11 +239,11 @@ local cpu = lain.widget.cpu({
 })
 
 -- Coretemp (lm_sensors, per core)
-local tempwidget = awful.widget.watch({awful.util.shell, '-c', 'sensors | grep Core'}, 30,
+local tempwidget = awful.widget.watch({awful.util.shell, '-c', 'sensors | rg CPU'}, 5,
 function(widget, stdout)
     local temps = ""
     for line in stdout:gmatch("[^\r\n]+") do
-        temps = temps .. line:match("+(%d+).*°C")  .. "° " -- in Celsius
+        temps = temps .. line:match("+(%d+).*°C")  .. "°C " -- in Celsius
     end
     widget:set_markup(markup.font(theme.font, " " .. temps))
 end)
@@ -418,7 +418,7 @@ function theme.at_screen_connect(s)
             arrow(pywal.color2, pywal.color4),
             wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, 2, 3), pywal.color4),
             arrow(pywal.color4, pywal.color6),
-            wibox.container.background(wibox.container.margin(wibox.widget { tempicon, temp.widget, layout = wibox.layout.align.horizontal }, 4, 4), pywal.color6),
+            wibox.container.background(wibox.container.margin(wibox.widget { tempicon, tempwidget, layout = wibox.layout.align.horizontal }, 4, 4), pywal.color6),
             arrow(pywal.color6, pywal.color8),
             wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, 3, 4), pywal.color8),
             arrow(pywal.color8, pywal.color3),
