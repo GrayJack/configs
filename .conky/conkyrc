@@ -1,5 +1,5 @@
 conky.config = {
-    font = 'Dungeon:size=8',
+    font = 'Ubuntu:size=8',
     alignment = 'middle_right',
     background = true,
     color1 = '#31F1A7', -- Manjaro Green
@@ -33,11 +33,11 @@ conky.text = [[
 ################################################################################
 ##  Date
 ################################################################################
-${voffset 10}${goto 5}${font Dungeon:bold:size=12}${time %a}$font${voffset -20}\
-${alignr}${color1}${font Dungeon:size=45}${time %e}$font${color}
-${voffset -20}${goto 5}${font Dungeon:bold:size=12}${time %b}$font ${voffset 2}\
-${font Dungeon:bold:size=20}${time %Y}$font
-${font Dungeon:bold:size=8}
+${voffset 10}${goto 5}${font Ubuntu:bold:size=12}${time %a}$font${voffset -20}\
+${alignr}${color1}${font Ubuntu:size=45}${time %e}$font${color}
+${voffset -20}${goto 5}${font Ubuntu:bold:size=12}${time %b}$font ${voffset 2}\
+${font Ubuntu:bold:size=20}${time %Y}$font
+${font Ubuntu:bold:size=8}
 #
 $hr
 #
@@ -45,7 +45,7 @@ $hr
 ##  OS, Kernel, Uptime
 ################################################################################
 ${color1}${font ConkyColors:size=14}a${font}
-${font Dungeon:bold:size=8}\
+${font Ubuntu:bold:size=8}\
 ${voffset 10}${color2}${execi 10000 awk -F= '/TION/ \
 {print $2}' /etc/lsb-release |sed 's/"//g'} ${execi 10000 awk -F= '/EASE=/ \
 {printf $2" "} /NAME/ {print $2}' /etc/lsb-release}
@@ -60,7 +60,7 @@ $hr
 ##  CPU Data
 ################################################################################
 ${color1}${font ConkyColors:size=14}d${font}
-${font Dungeon:bold:size=8}\
+${font Ubuntu:bold:size=8}\
 ${voffset 10}${color1}CPU:${color2}$alignr$color2$cpu%$color
 $alignc${freq 1}MHz  ${freq 2}MHz  ${freq 3}MHz  ${freq 4}MHz
 $alignc${freq 5}MHz  ${freq 6}MHz  ${freq 7}MHz  ${freq 8}MHz
@@ -85,7 +85,7 @@ $hr
 ##  RAM and Swap Data
 ################################################################################
 ${color1}${font ConkyColors:size=14}g${font}
-${font Dungeon:bold:size=8}\
+${font Ubuntu:bold:size=8}\
 ${voffset 10}${color1}RAM: ${color2}$alignr$color2$mem/$memmax$color
 ${memgraph 30,250 31F1A7 F80D0D -t -l}
 ${voffset 10}${color1}SWAP:${color2}$alignr$color2$swap/$swapmax$color
@@ -103,7 +103,7 @@ $hr
 ##  Storage
 ################################################################################
 ${color1}${font ConkyColors:size=14}i${font}
-${font Dungeon:bold:size=8}\
+${font Ubuntu:bold:size=8}\
 ${voffset 10}${color3}Root$alignr$color2${fs_used /}/${fs_size /}$color
 ${fs_bar 5,250 /}
 ${color1}R/W: $color2${diskio_read nvme0n1}${goto 125}/${alignr}\
@@ -125,7 +125,7 @@ $hr
 ##  Network Status
 ################################################################################
 ${color1}${font ConkyColors:size=14}k${font}
-${font Dungeon:bold:size=8}\
+${font Ubuntu:bold:size=8}\
 # Wired - Always show... not that I like, but if conditionals on conky is shitty
 ${if_up enp2s0}\
 ${color1}${voffset 10}Cable: $color2 Down $color2${downspeedf enp2s0} KiB\

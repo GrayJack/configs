@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7-dev"
+jobs:
+  include:
+  - python: 3.6
+    env: TOXENV=lint
+before_install:
+  - wget -O nvim https://github.com/neovim/neovim/releases/download/v0.3.1/nvim.appimage
+  - chmod +x nvim
+  - export PATH="$PATH:."
+install:
+  - pip3 install tox-travis codecov
+script:
+  - nvim --version
+  - tox
+  - codecov

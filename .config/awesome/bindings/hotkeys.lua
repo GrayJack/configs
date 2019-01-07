@@ -10,8 +10,8 @@ globalkeys = my_table.join(globalkeys,
 
     --[[ Function keys ]]
     -- Brightness
-    awful.key({                   }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 5") end),
-    awful.key({                   }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 5") end),
+    awful.key({                   }, "XF86MonBrightnessUp", function () os.execute("light -A 5") end),
+    awful.key({                   }, "XF86MonBrightnessDown", function () os.execute("light -U 5") end),
 
     -- Volume
     awful.key({                   }, "XF86AudioRaiseVolume",

@@ -33,8 +33,8 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Rust Plugins
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -77,22 +77,24 @@ cnoremap R!! <bar> :r suda://%<CR>
 cnoremap E!! <bar> :e suda://%<CR>
 
 " deoplete
-let g:deoplete#enable_at_startup=1
-noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
+"let g:deoplete#enable_at_startup=1
+"noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
 " Config ale plugin
 let g:ale_linters = {
 \    'rust': ['rls'],
 \    'r': ['lintr'],
-\    'python': ['pyflakes', 'yapf'],
-\    'ocaml': ['ols', 'ocamlformat'],
+\    'python': ['pyls', 'pyflakes', 'yapf'],
+\    'ocaml': ['merlin', 'ols', 'ocamlformat'],
 \    'julia': ['languageserver'],
 \    'c++': ['clangd', 'flawfinder'],
-\    'c': ['cland', 'flawfinder'],
+\    'c': ['clangd', 'flawfinder'],
+\    'clojure': ['joker'],
+\    'elm': ['elm-format', 'elm-make'],
 \    'asm': ['gcc'],
 \}
 let g:ale_completion_enabled = 1
-let g:ale_rust_cargo_use_clippy = 1
+" let g:ale_rust_cargo_use_clippy = 1
 
 " Airline config
 let g:airline#extensions#tabline#ale#enabled = 1
