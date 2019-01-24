@@ -34,11 +34,11 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 " Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Rust Plugins
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+" Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
 
@@ -78,7 +78,7 @@ cnoremap E!! <bar> :e suda://%<CR>
 
 " deoplete
 "let g:deoplete#enable_at_startup=1
-"noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
+noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
 " Config ale plugin
 let g:ale_linters = {
@@ -94,7 +94,7 @@ let g:ale_linters = {
 \    'asm': ['gcc'],
 \}
 let g:ale_completion_enabled = 1
-" let g:ale_rust_cargo_use_clippy = 1
+let g:ale_rust_cargo_use_clippy = 1
 
 " Airline config
 let g:airline#extensions#tabline#ale#enabled = 1
@@ -121,13 +121,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
 " Vim Racer
-set hidden
-let g:racer_cmd = "/home/grayjack/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
+" set hidden
+" let g:racer_cmd = "/home/grayjack/.cargo/bin/racer"
+" let g:racer_experimental_completer = 1
+"au FileType rust nmap gd <Plug>(rust-def)
+"au FileType rust nmap gs <Plug>(rust-def-split)
+"au FileType rust nmap gx <Plug>(rust-def-vertical)
+"au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Poliglot
 let g:polyglot_disabled = ['python', 'python-ident']

@@ -63,17 +63,22 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [[ "$OSTYPE" == linux* ]]; then
     alias clean-cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
     alias restart-bluetooth="sudo systemctl restart bluetooth"
+    alias get-gpu="glxinfo | grep 'server glx vendor string'"
 fi
 
 # Cargo target dir
 export CARGO_TARGET_DIR=~/MySources/cargo_target
+
+# R lib dir
+export R_LIBS_USER=~/.R/
+export R_LIBS=~/.R/
 
 # Library path for some programs
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 
 # Path to programs
-export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin:/home/grayjack/.local/bin
+export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin:~/.local/bin:~/.cargo/bin/
 
 # PowerLevel9k config
 # More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
@@ -154,3 +159,23 @@ ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=165'
 #ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=160')
 # root example
 #ZSH_HIGHLIGHT_STYLES[root]='bg=160'
+#
+
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+#  __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/grayjack/.anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+#  if [ $? -eq 0 ]; then
+#      eval "$__conda_setup"
+#  else
+#      if [ -f "/home/grayjack/.anaconda3/etc/profile.d/conda.sh" ]; then
+#          . "/home/grayjack/.anaconda3/etc/profile.d/conda.sh"
+#          CONDA_CHANGEPS1=false conda activate base
+#      else
+#          export PATH="/home/grayjack/.anaconda3/bin:$PATH"
+#      fi
+#  fi
+#  unset __conda_setup
+# <<< conda init <<<
+
+# opam configuration
+test -r /home/grayjack/.opam/opam-init/init.zsh && . /home/grayjack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
