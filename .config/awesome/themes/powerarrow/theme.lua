@@ -67,6 +67,7 @@ theme.widget_ac                                 = theme.dir .. "/icons/ac.png"
 theme.widget_battery                            = theme.dir .. "/icons/battery.png"
 theme.widget_battery_low                        = theme.dir .. "/icons/battery_low.png"
 theme.widget_battery_empty                      = theme.dir .. "/icons/battery_empty.png"
+theme.widget_brightness                         = theme.dir .. "/icons/brightness.png"
 theme.widget_mem                                = theme.dir .. "/icons/mem.png"
 theme.widget_cpu                                = theme.dir .. "/icons/cpu.png"
 theme.widget_temp                               = theme.dir .. "/icons/temp.png"
@@ -313,6 +314,16 @@ local net = lain.widget.net({
     end
 })
 
+-- Brigtness
+local brighticon = wibox.widget.imagebox(theme.widget_brightness)
+-- If you use xbacklight, comment the line with "light -G" and uncomment the line bellow
+-- local brightwidget = awful.widget.watch('xbacklight -get', 0,
+local brightwidget = awful.widget.watch('light -G', 0,
+    function(widget, stdout, stderr, exitreason, exitcode)
+        local brightness_level = tonumber(string.format("%.0f", stdout))
+        widget:set_markup(markup.font(theme.font, " " .. brightness_level .. "%"))
+end)
+
 -- Redshift
 --local redicon = wibox.widget.imagebox(theme.widget_red_off)
 --[[local redshift = wibox.widget.textbox()
@@ -413,26 +424,27 @@ function theme.at_screen_connect(s)
             wibox.container.background(wibox.container.margin(task, 3, 7), "#343434"),
             arrow("#343434", theme.bg_normal),
             wibox.container.background(wibox.container.margin(wibox.widget { mpdicon, theme.mpd.widget, layout = wibox.layout.align.horizontal }, 3, 6), theme.bg_focus),
-            arrow(theme.bg_focus, pywal.color2),
-            wibox.container.background(wibox.container.margin(wibox.widget { fsicon, theme.fs.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color2),
-            arrow(pywal.color2, pywal.color4),
-            wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, 2, 3), pywal.color4),
-            arrow(pywal.color4, pywal.color6),
-            wibox.container.background(wibox.container.margin(wibox.widget { tempicon, tempwidget, layout = wibox.layout.align.horizontal }, 4, 4), pywal.color6),
+            arrow(theme.bg_focus, pywal.color5),
+            wibox.container.background(wibox.container.margin(wibox.widget { fsicon, theme.fs.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color5),
+            arrow(pywal.color5, pywal.color6),
+            wibox.container.background(wibox.container.margin(wibox.widget { memicon, mem.widget, layout = wibox.layout.align.horizontal }, 2, 3), pywal.color6),
             arrow(pywal.color6, pywal.color8),
-            wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, 3, 4), pywal.color8),
-            arrow(pywal.color8, pywal.color3),
-            wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color3),
-            arrow(pywal.color3, pywal.color5),
-            wibox.container.background(wibox.container.margin(wibox.widget { volicon, theme.volume.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color5),
-            arrow(pywal.color5, pywal.color7),
-            wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color7),
-            arrow(pywal.color7, theme.bg_systray),
+            wibox.container.background(wibox.container.margin(wibox.widget { tempicon, tempwidget, layout = wibox.layout.align.horizontal }, 4, 4), pywal.color8),
+            arrow(pywal.color8, pywal.color9),
+            wibox.container.background(wibox.container.margin(wibox.widget { cpuicon, cpu.widget, layout = wibox.layout.align.horizontal }, 3, 4), pywal.color9),
+            arrow(pywal.color9, pywal.color10),
+            wibox.container.background(wibox.container.margin(wibox.widget { baticon, bat.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color10),
+            arrow(pywal.color10, pywal.color11),
+            wibox.container.background(wibox.container.margin(wibox.widget { brighticon, brightwidget, layout = wibox.layout.align.horizontal }, 3, 4), pywal.color11),
+            arrow(pywal.color11, pywal.color12),
+            wibox.container.background(wibox.container.margin(wibox.widget { volicon, theme.volume.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color12),
+            arrow(pywal.color12, pywal.color13),
+            wibox.container.background(wibox.container.margin(wibox.widget { nil, neticon, net.widget, layout = wibox.layout.align.horizontal }, 3, 3), pywal.color13),
+            arrow(pywal.color13, pywal.color14),
+            wibox.container.background(wibox.container.margin(clock, 4, 4), pywal.color14),
+            arrow(pywal.color14, theme.bg_systray),
             wibox.container.background(wibox.container.margin(wibox.widget.systray(), 3, 4), theme.bg_systray),
-            arrow(theme.bg_systray, pywal.color13),
-            wibox.container.background(wibox.container.margin(clock, 4, 4), pywal.color13),
-            arrow(pywal.color13, "alpha"),
-            --]]
+            arrow(theme.bg_systray, "alpha"),
             s.mylayoutbox,
         },
     }
