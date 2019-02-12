@@ -115,3 +115,6 @@ fi
 # As above, if we were passed -d/--desktop, we'll attempt to restore all windows
 # after unlocking.
 ${desktop} ${desktop:+-k off}
+
+
+xset b off

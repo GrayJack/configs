@@ -1,6 +1,8 @@
 set nu
 set mouse=a
 set encoding=UTF-8
+set listchars=tab:»»,space:·,eol:¬
+set list
 
 syntax on
 colorscheme monokai

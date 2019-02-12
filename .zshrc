@@ -66,12 +66,15 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias get-gpu="glxinfo | grep 'server glx vendor string'"
 fi
 
-# Cargo target dir
-export CARGO_TARGET_DIR=~/MySources/cargo_target
+# Cargo target dir'
+export CARGO_TARGET_DIR=~/MySources/.cargo_target
 
 # R lib dir
 export R_LIBS_USER=~/.R/
 export R_LIBS=~/.R/
+
+# Carp Lisp
+export CARP_DIR=~/.carp/
 
 # Library path for some programs
 export DEVKITPRO=/opt/devkitpro
