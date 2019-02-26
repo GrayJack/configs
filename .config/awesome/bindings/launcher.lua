@@ -7,9 +7,9 @@ globalkeys = my_table.join(globalkeys,
     -- Terminal
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
             {description = "Open a terminal", group = "Awesome: launcher"}),
-    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(python) end,
-            {description = "Open a Python interpreter", group = "Awesome: launcher"}),
-    awful.key({ modkey, "Control"   }, "Return", function () awful.spawn(julia) end,
+    -- awful.key({ modkey, "Control" }, "Return", function () awful.spawn(python) end,
+    --         {description = "Open a Python interpreter", group = "Awesome: launcher"}),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(julia) end,
                     {description = "Open a Julia interpreter", group = "Awesome: launcher"}),
 
     -- User programs

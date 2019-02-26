@@ -21,7 +21,8 @@ local pywal = require("themes.powerarrow.pywal")
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow"
 theme.icon_theme                                = "Papirus-Adapta-Nokto-Maia"
-theme.wallpaper                                 = pywal.wallpaper
+-- theme.wallpaper                                 = pywal.wallpaper
+theme.wallpaper                                 = "/home/grayjack/Pictures/Wallpapers/lights-in-the-glass.jpg"
 theme.font                                      = "Noto Sans 10"
 theme.white                                     = "#FEFEFE"
 theme.fg_normal                                 = pywal.color7 -- OLD "#FEFEFE"
@@ -132,7 +133,7 @@ theme.cal = lain.widget.cal({
     -- cal = "cal --color=always",
     attach_to = { clock },
     notification_preset = {
-        font = "Knack 11",
+        font = "Hack Nerd Font 11",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -318,10 +319,10 @@ local net = lain.widget.net({
 local brighticon = wibox.widget.imagebox(theme.widget_brightness)
 -- If you use xbacklight, comment the line with "light -G" and uncomment the line bellow
 -- local brightwidget = awful.widget.watch('xbacklight -get', 0,
-local brightwidget = awful.widget.watch('light -G', 0,
+local brightwidget = awful.widget.watch('light -G', 0.3,
     function(widget, stdout, stderr, exitreason, exitcode)
         local brightness_level = tonumber(string.format("%.0f", stdout))
-        widget:set_markup(markup.font(theme.font, " " .. brightness_level .. "%"))
+        widget:set_markup(markup.font(theme.font, " " .. brightness_level .. "% "))
 end)
 
 -- Redshift
@@ -379,7 +380,7 @@ function theme.at_screen_connect(s)
     gears.wallpaper.maximized(wallpaper, s, true)
 
     -- Tags
-    awful.tag(awful.util.tagnames, s, {awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[2], awful.layout.layouts[2]})
+    awful.tag(awful.util.tagnames, s, {awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1], awful.layout.layouts[1]})
 
 
     -- Create a promptbox for each screen
@@ -418,6 +419,7 @@ function theme.at_screen_connect(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             --wibox.container.margin(redshift, 4, 8),
+            -- wibox.container.margin(wibox.widget { weathericon, theme.weather, layout = wibox.layout.align.horizontal }, 3, 6),
             wibox.container.margin(scissors, 4, 8),
             --using shapes
             arrow(theme.bg_normal, "#343434"),

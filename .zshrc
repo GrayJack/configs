@@ -21,11 +21,13 @@ plugins=(
     git-extra
     history
     history-substring-search
+    jump
     lol
     sudo
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
+    z
 )
 
 autoload -U compinit && compinit
@@ -33,9 +35,6 @@ autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# Z
-. /usr/share/z/z.sh
 
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)

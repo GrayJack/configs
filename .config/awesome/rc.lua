@@ -16,7 +16,8 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local treetile      = require("treetile")
 -- local dynamite      = require("dynamite")
-collision = require("collision")()
+local collision
+= require("collision")
 
 -- treetile.focusnew = true
 -- }}}
@@ -71,6 +72,7 @@ dofile(config_path .. "bindings/client-buttons.lua")
 -- Set keys
 root.keys(globalkeys)
 -- }}}
+collision()
 
 -- {{{ Rules }}}
 dofile(config_path .. "main/rules.lua")

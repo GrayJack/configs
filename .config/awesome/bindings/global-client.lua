@@ -1,8 +1,13 @@
 local awful         = require("awful")
                       require("awful.autofocus")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
+local collision = require("collision")
 
 globalkeys = my_table.join(globalkeys,
+    -- Dynamic tiling
+    awful.key({modkey,      }, "c", collision.split,
+    {description = "Split into other layouts", group = "Client: global"}),
+
     -- Default client focus
     awful.key({ altkey,           }, "j",
        function ()
@@ -22,7 +27,7 @@ globalkeys = my_table.join(globalkeys,
            if client.focus then client.focus:raise() end
        end,
        {description = "Focus down", group = "Client: global"}),
-    awful.key({ modkey }, "i",
+    awful.key({ modkey }, "h",
        function()
            awful.client.focus.global_bydirection("up")
            if client.focus then client.focus:raise() end
@@ -66,8 +71,7 @@ globalkeys = my_table.join(globalkeys,
                 c:raise()
             end
         end,
-        {description = "Restore minimized", group = "Client: global"}),
+        {description = "Restore minimized", group = "Client: global"})
 
-    awful.key({modkey,      }, "c", collision.split,
-        {description = "Split into other layouts", group = "Client: global"})
+
 )

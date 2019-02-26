@@ -23,6 +23,8 @@ for i = 1, 9 do
                         local tag = screen.tags[i]
                         if tag then
                            tag:view_only()
+                        else
+                            awful.tag.add(i)
                         end
                   end,
                   descr_view),

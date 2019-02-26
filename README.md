@@ -14,6 +14,7 @@ That means that this repository will only work 100% as is if the system have all
  * dolphin
  * firefox
  * flameshot
+ * fzf
  * hack nerdfont complete font
  * i3lock-color
  * indicator-kdeconnect
@@ -21,13 +22,14 @@ That means that this repository will only work 100% as is if the system have all
  * kde plasma 5
  * nm-applet
  * powerlevel9k (zsh theme)
+ * ranger
  * ripgrep (way faster than grep)
  * rofi
  * oh-my-zsh (zsh framework)
  * pulseaudio
  * pywal
+ * xautolock
  * xrdb
- * z
  * zsh
  * zsh-autosuggestions (zsh plugin)
  * zsh-completions (zsh plugin)

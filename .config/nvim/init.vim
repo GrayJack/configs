@@ -25,10 +25,11 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'bakpakin/janet.vim'
 Plug 'junegunn/fzf.vim'
 "Plug 'itchyny/lightline.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'

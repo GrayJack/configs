@@ -1,7 +1,7 @@
 local awful         = require("awful")
                       require("awful.autofocus")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
-local treetile      = require "treetile"
+local treetile      = require("treetile")
 
 globalkeys = my_table.join(globalkeys,
     -- Layout
@@ -25,7 +25,7 @@ globalkeys = my_table.join(globalkeys,
             elseif awful.layout.get(c.screen).name == "treetile" then
                 treetile.resize_client(0.1)
             else
-                awful.tag.incmwfact( 0.05)
+                awful.tag.incmwfact(0.05)
             end
         end,
             {description = "Increase master width factor (Tiling) / Move window right (Floating)", group = "Awesome: layout"}),

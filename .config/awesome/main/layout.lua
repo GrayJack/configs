@@ -3,12 +3,14 @@ local awful    = require("awful")
 local lain     = require("lain")
 -- local dynamite      = require("dynamite")
 local treetile =  require("treetile")
+-- local collision = require("collision")
+
+-- require("awful.layout.dynamic")
 
 awful.layout.layouts =  {
-    -- require("dynamite.suit.treesome"),
+    require("dynamite.suit.treesome"),
     -- require("dynamite.layout.stack")
-    -- dynamite.manual,
-    treetile,
+    -- treetile,
     --awful.layout.suit.tile,
     awful.layout.suit.floating,
     --awful.layout.suit.tile.left,
