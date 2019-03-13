@@ -27,6 +27,8 @@ globalkeys = my_table.join(globalkeys,
             {description = "Launch VSCode", group = "Awesome: launcher"}),
     awful.key({ modkey,          }, "space", function () awful.util.spawn(rofi) end,
             {description = "Launch rofi", group = "Awesome: launcher"}),
+    awful.key({ altkey,          }, "space", function () awful.util.spawn(zeal) end,
+            {description = "Toggle Zeal", group = "Awesome: launcher"}),
     --[[awful.key({ modkey,          }, "space", function () awful.util.spawn("/usr/bin/dmenu_recency")          end,
             {description = "Launch dmenu", group = "Awesome: launcher"}),]]--
 

@@ -15,6 +15,7 @@ That means that this repository will only work 100% as is if the system have all
  * firefox
  * flameshot
  * fzf
+ * grim
  * hack nerdfont complete font
  * i3lock-color
  * indicator-kdeconnect
@@ -25,6 +26,9 @@ That means that this repository will only work 100% as is if the system have all
  * ranger
  * ripgrep (way faster than grep)
  * rofi
+ * sway
+ * swaylock
+ * swayidle
  * oh-my-zsh (zsh framework)
  * pulseaudio
  * pywal
@@ -42,3 +46,4 @@ That means that this repository will only work 100% as is if the system have all
  * There some pywal custom templates in `.config/wal/templates/`, the contents of the alacritty one need to be copy and pasted inside the alacritty config
  * Install the zsh plugins in the `/home/$USER/.oh-my-zsh/custom/plugins/` folder
  * You have to change de Ethernet and Wireless port names in the conky config files to work as expected.
+ * Don't use conky on sway

@@ -16,8 +16,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local treetile      = require("treetile")
 -- local dynamite      = require("dynamite")
-local collision
-= require("collision")
+local collision = require("collision")
 
 -- treetile.focusnew = true
 -- }}}

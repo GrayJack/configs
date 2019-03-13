@@ -9,7 +9,7 @@ colorscheme monokai
 
 " check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
 set autoread
-au CursorHold * checktime 
+au CursorHold * checktime
 
 " Tabs configs
 set tabstop=4
@@ -19,29 +19,29 @@ set expandtab
 set autoindent
 
 " Activate omnicompletions
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete<Paste>
-set completeopt=menu,menuone,preview,noselect,noinsert
+"filetype plugin on
+"set omnifunc=syntaxcomplete#Complete<Paste>
+"set completeopt=menu,menuone,preview,noselect,noinsert
 
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'bakpakin/janet.vim'
 Plug 'junegunn/fzf.vim'
 "Plug 'itchyny/lightline.vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
-" Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Rust Plugins
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-" Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
 
@@ -63,7 +63,7 @@ vnoremap <silent> <C-y> "+y<CR>
 noremap <C-\> :NERDTreeToggle<CR>
 
 " Toggle tagbar
-nnoremap <F8> :TagbarToggle<CR> 
+nnoremap <F8> :TagbarToggle<CR>
 
 " Enable fuzzy files search
 nnoremap ; :Files<CR>
@@ -81,7 +81,7 @@ cnoremap E!! <bar> :e suda://%<CR>
 
 " deoplete
 "let g:deoplete#enable_at_startup=1
-noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
+"noremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<C-i>"
 
 " Config ale plugin
 let g:ale_linters = {
@@ -108,20 +108,21 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = '☰'
-"let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols = {}
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰'
+let g:airline_symbols.maxlinenr = ''
 
 " Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 1
 
 " Vim Racer
 " set hidden
@@ -134,4 +135,3 @@ let g:syntastic_check_on_wq = 1
 
 " Poliglot
 let g:polyglot_disabled = ['python', 'python-ident']
-
