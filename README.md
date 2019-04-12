@@ -26,6 +26,7 @@ That means that this repository will only work 100% as is if the system have all
  * ranger
  * ripgrep (way faster than grep)
  * rofi
+ * slurp
  * sway
  * swaylock
  * swayidle

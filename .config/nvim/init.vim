@@ -55,6 +55,11 @@ call plug#end()
 au TabLeave * let g:lasttab = tabpagenr()
 nnoremap <silent> <C-l> :exe "tabn ".g:lasttab<CR>
 vnoremap <silent> <C-l> :exe "tabn ".g:lasttab<CR>
+nnoremap <silent> <C-k> :tabn<CR>
+nnoremap <silent> <C-j> :tabp<CR>
+vnoremap <silent> <C-k> :tabn<CR>
+vnoremap <silent> <C-k> :tabp<CR>
+
 
 " Copy outside vim
 vnoremap <silent> <C-y> "+y<CR>
@@ -78,6 +83,14 @@ cnoremap WQ!! <bar> :wq suda://%<CR>
 cnoremap R!! <bar> :r suda://%<CR>
 " Open current file with sudo
 cnoremap E!! <bar> :e suda://%<CR>
+
+" Tabs shortcuts
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 " deoplete
 "let g:deoplete#enable_at_startup=1
