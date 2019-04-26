@@ -25,11 +25,19 @@ set autoindent
 
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'bakpakin/janet.vim'
-Plug 'junegunn/fzf.vim'
-"Plug 'itchyny/lightline.vim'
+" Themes
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
+
+" Language
+Plug 'bakpakin/janet.vim'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+
+" Productivity
+Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
@@ -38,17 +46,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh', }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kana/vim-smartinput'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'lambdalisue/suda.vim'
+Plug 'meain/vim-package-info', { 'do': 'npm install' }
 
 " Rust Plugins
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
-
-Plug 'kana/vim-smartinput'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'ryanoasis/vim-devicons'
-Plug 'lambdalisue/suda.vim'
 call plug#end()
 
 " Go to last active tab
@@ -91,6 +97,9 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
+
+" Package info
+let g:vim_package_info_virutaltext_prefix = '  ¤ '
 
 " deoplete
 "let g:deoplete#enable_at_startup=1

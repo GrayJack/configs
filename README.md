@@ -17,7 +17,9 @@ That means that this repository will only work 100% as is if the system have all
  * fzf
  * grim
  * hack nerdfont complete font
+ * i3
  * i3lock-color
+ * i3status-rust
  * indicator-kdeconnect
  * kate
  * kde plasma 5

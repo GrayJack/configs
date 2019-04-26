@@ -62,18 +62,27 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [[ "$OSTYPE" == linux* ]]; then
     alias clean-cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
     alias restart-bluetooth="sudo systemctl restart bluetooth"
-    alias get-gpu="glxinfo | grep 'server glx vendor string'"
+    alias get-gpu="glxinfo | rg 'server glx vendor string'"
 fi
 
+
 # Cargo target dir'
+export RUST_ROOT=~/.cargo/bin
 export CARGO_TARGET_DIR=~/MySources/.cargo_target
+
+# Julia
+export JULIA_NUM_THREADS=8
 
 # R lib dir
 export R_LIBS_USER=~/.R/
 export R_LIBS=~/.R/
 
 # Carp Lisp
-export CARP_DIR=~/.carp/
+export CARP_DIR=~/.local/lib/carp/
+
+# Janet Lisp libraries path
+#export JANET_PATH=/usr/lib/janet
+# :~/.local/lib/janet
 
 # Library path for some programs
 export DEVKITPRO=/opt/devkitpro
