@@ -18,7 +18,6 @@ plugins=(
     archlinux
     extract
     git
-    git-extra
     history
     history-substring-search
     jump
@@ -36,6 +35,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Import other config files
+source /home/grayjack/.zshenv # Environment variable and configuration
+source /home/grayjack/.zshhighlight.zsh # Highlight config
+
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
@@ -44,16 +47,6 @@ fe() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
   [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='nvim'
-fi
-
-# ssh keys
-export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -64,129 +57,3 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias restart-bluetooth="sudo systemctl restart bluetooth"
     alias get-gpu="glxinfo | rg 'server glx vendor string'"
 fi
-
-
-# Cargo target dir'
-export RUST_ROOT=~/.cargo/bin
-export CARGO_TARGET_DIR=~/MySources/.cargo_target
-
-# Julia
-export JULIA_NUM_THREADS=8
-
-# R lib dir
-export R_LIBS_USER=~/.R/
-export R_LIBS=~/.R/
-
-# Carp Lisp
-export CARP_DIR=~/.local/lib/carp/
-
-# Janet Lisp libraries path
-#export JANET_PATH=/usr/lib/janet
-# :~/.local/lib/janet
-
-# Library path for some programs
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
-
-# Path to programs
-export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin:~/.local/bin:~/.cargo/bin/
-
-# PowerLevel9k config
-# More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-if [[ "$OSTYPE" == linux* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-    POWERLEVEL9K_DIR_HOME_BACKGROUND='cyan'
-    POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='cyan'
-    POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
-    POWERLEVEL9K_STATUS_OK_BACKGROUND='023'
-    POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
-elif [[ "$OSTYPE" == freebsd* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-    POWERLEVEL9K_DIR_HOME_BACKGROUND='009'
-    POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='009'
-    POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
-    POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
-else
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-fi
-POWERLEVEL9K_PUBLIC_IP_BACKGROUND='cyan'
-POWERLEVEL9K_PUBLIC_IP_FOREGROUND='black'
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113'
-
-# Highlights
-#
-# Colors
-# Magenta = 165      Cyan    = 030      Yellow  = 178
-# Red     = 160      Blue    = 033      Green   = 028
-# Orange  = 208      Purple  = 093
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-# brackets
-ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=033,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-2]='fg=160,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=178,bold'
-ZSH_HIGHLIGHT_STYLES[bracket-level-4]='fg=165,bold'
-# cursor
-#ZSH_HIGHLIGHT_STYLES[cursor]='bg=033'
-# main
-# default
-ZSH_HIGHLIGHT_STYLES[default]='none'
-# unknown
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=160'
-# command
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=165,bold'
-ZSH_HIGHLIGHT_STYLES[alias]='fg=208'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=028,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=028,bold'
-ZSH_HIGHLIGHT_STYLES[command]='fg=028'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=208,underline' #DarkOrange
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=178'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=028'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=033'
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=033,underline'
-# path
-ZSH_HIGHLIGHT_STYLES[path]='fg=178' #Yellow
-ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=178'
-ZSH_HIGHLIGHT_STYLES[path_approx]='fg=178'
-# shell
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=030'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=033'
-ZSH_HIGHLIGHT_STYLES[assign]='fg=165'
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=093,underline'
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=093,underline'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=093'
-# quotes
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=165,underline'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=165'
-# pattern example
-#ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=160')
-# root example
-#ZSH_HIGHLIGHT_STYLES[root]='bg=160'
-#
-
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-#  __conda_setup="$(CONDA_REPORT_ERRORS=false '/home/grayjack/.anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-#  if [ $? -eq 0 ]; then
-#      eval "$__conda_setup"
-#  else
-#      if [ -f "/home/grayjack/.anaconda3/etc/profile.d/conda.sh" ]; then
-#          . "/home/grayjack/.anaconda3/etc/profile.d/conda.sh"
-#          CONDA_CHANGEPS1=false conda activate base
-#      else
-#          export PATH="/home/grayjack/.anaconda3/bin:$PATH"
-#      fi
-#  fi
-#  unset __conda_setup
-# <<< conda init <<<
-
-# opam configuration
-test -r /home/grayjack/.opam/opam-init/init.zsh && . /home/grayjack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

@@ -35,6 +35,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'bakpakin/janet.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'hellerve/carp-vim'
 
 " Productivity
 Plug 'junegunn/fzf.vim'
@@ -66,6 +67,9 @@ nnoremap <silent> <C-j> :tabp<CR>
 vnoremap <silent> <C-k> :tabn<CR>
 vnoremap <silent> <C-k> :tabp<CR>
 
+" Find and Replace
+map <leader>fr :%s///g<left><left> " Find and replace
+map <leader>frl :s///g<left><left> " Find and replace (current line only)
 
 " Copy outside vim
 vnoremap <silent> <C-y> "+y<CR>
@@ -140,6 +144,7 @@ let g:airline_symbols.maxlinenr = ''
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
+let g:syntastic_carp_checkers = ['carp']
 
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
