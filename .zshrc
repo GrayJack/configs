@@ -29,15 +29,20 @@ plugins=(
     z
 )
 
-autoload -U compinit && compinit
+autoload -Uz compinit
+if [ $(date +'%j') != $(date -r ~/.zcompdump +'%j') ]; then
+  compinit
+else
+  compinit -C
+fi
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # Import other config files
-source /home/grayjack/.zshenv # Environment variable and configuration
-source /home/grayjack/.zshhighlight.zsh # Highlight config
+source /home/grayjack/.zshenv # Environment variable/function and powerlevel9k config
+source /home/grayjack/.zsettings.zsh # Settings of other plugins
 
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
@@ -56,4 +61,5 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias clean-cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
     alias restart-bluetooth="sudo systemctl restart bluetooth"
     alias get-gpu="glxinfo | rg 'server glx vendor string'"
+    alias emacs-nw="emacs -nw"
 fi

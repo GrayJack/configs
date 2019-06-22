@@ -7,6 +7,13 @@ color-test() {
     done
 }
 
+
+##### AUTOSUGGESTIONS ######
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+
+##### SYNTAX HIGHLIGHT #####
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern)
 # main
 ## default
@@ -18,7 +25,7 @@ ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=001'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=009'
 ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=009,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=006,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=002,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=002,underline'
 ZSH_HIGHLIGHT_STYLES[command]='fg=002'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=009,underline' #DarkOrange
 ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=001,underline'

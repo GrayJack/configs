@@ -60,33 +60,34 @@ export PATH=$PATH:~/.local/bin:~/.local/sbin:~/.cargo/bin
 # opam configuration
 test -r /home/grayjack/.opam/opam-init/init.zsh && . /home/grayjack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-# PowerLevel9k config
+##### POWERLEVEL9K CONFIG #####
 # More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
+P9K_IGNORE_VAR_WARNING=true
+P9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 if [[ "$OSTYPE" == linux* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-#    POWERLEVEL9K_DIR_HOME_BACKGROUND='cyan'
-#    POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='cyan'
-#    POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
-#    POWERLEVEL9K_STATUS_OK_BACKGROUND='023'
-    POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
+    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
+#    P9K_DIR_HOME_BACKGROUND='cyan'
+#    P9K_DIR_DEFAULT_BACKGROUND='cyan'
+#    P9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
+#    P9K_STATUS_OK_BACKGROUND='023'
+    P9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
+    P9K_PROMPT_ON_NEWLINE=true
+    P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'\u2570\uf460 '
+    P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
+    P9K_DIR_SHORTEN_LENGTH=6
 elif [[ "$OSTYPE" == freebsd* ]]; then
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-    POWERLEVEL9K_DIR_HOME_BACKGROUND='009'
-    POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='009'
-    POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
-    POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-    POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="\u2570\uf460 "
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=6
+    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
+    P9K_DIR_HOME_BACKGROUND='009'
+    P9K_DIR_DEFAULT_BACKGROUND='009'
+    P9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
+    P9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
+    P9K_PROMPT_ON_NEWLINE=true
+    P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'\u2570\uf460 '
+    P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
+    P9K_DIR_SHORTEN_LENGTH=6
 else
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
+    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
 fi
-POWERLEVEL9K_PUBLIC_IP_BACKGROUND='cyan'
-POWERLEVEL9K_PUBLIC_IP_FOREGROUND='black'
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON=$'\uf113'
+P9K_PUBLIC_IP_BACKGROUND='cyan'
+P9K_PUBLIC_IP_FOREGROUND='black'
+P9K_VCS_GIT_GITHUB_ICON=$'\uf113'
