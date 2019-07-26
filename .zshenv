@@ -14,13 +14,12 @@ fi
 # ssh keys
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-
 # Cargo target dir'
 export RUST_ROOT=~/.cargo/bin
 export CARGO_TARGET_DIR=~/MySources/.cargo_target
 
 # Julia
-export JULIA_NUM_THREADS=8
+export JULIA_NUM_THREADS=5
 
 # R lib dir
 export R_LIBS_USER=~/.R/
@@ -66,10 +65,6 @@ P9K_IGNORE_VAR_WARNING=true
 P9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
 if [[ "$OSTYPE" == linux* ]]; then
     P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-#    P9K_DIR_HOME_BACKGROUND='cyan'
-#    P9K_DIR_DEFAULT_BACKGROUND='cyan'
-#    P9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
-#    P9K_STATUS_OK_BACKGROUND='023'
     P9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
     P9K_PROMPT_ON_NEWLINE=true
     P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'\u2570\uf460 '
@@ -88,6 +83,4 @@ elif [[ "$OSTYPE" == freebsd* ]]; then
 else
     P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
 fi
-P9K_PUBLIC_IP_BACKGROUND='cyan'
-P9K_PUBLIC_IP_FOREGROUND='black'
 P9K_VCS_GIT_GITHUB_ICON=$'\uf113'
