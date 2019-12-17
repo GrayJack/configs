@@ -1,0 +1,1 @@
+/home/grayjack/.local/share/nvim/plugged/vim-monokai-tasty/colors/vim-monokai-tasty.vim

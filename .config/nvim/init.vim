@@ -5,7 +5,7 @@ set listchars=tab:»»,space:·,eol:¬
 set list
 
 syntax on
-colorscheme monokai
+colorscheme monokai-tasty
 
 " check file change every 4 seconds ('CursorHold') and reload the buffer upon detecting change
 set autoread
@@ -30,14 +30,17 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'patstockwell/vim-monokai-tasty'
 
 " Language
 Plug 'bakpakin/janet.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'hellerve/carp-vim'
+Plug 'ziglang/zig.vim'
 
 " Productivity
+Plug 'jceb/vim-orgmode'
 Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'sheerun/vim-polyglot'
@@ -51,6 +54,7 @@ Plug 'kana/vim-smartinput'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'lambdalisue/suda.vim'
 Plug 'meain/vim-package-info', { 'do': 'npm install' }
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Rust Plugins
 Plug 'racer-rust/vim-racer', { 'for': 'rust' }
@@ -127,7 +131,7 @@ let g:ale_rust_cargo_use_clippy = 1
 
 " Airline config
 let g:airline#extensions#tabline#ale#enabled = 1
-let g:airline_theme='deus'
+let g:airline_theme='monokai_tasty'
 let g:airline_powerline_fonts = 1
 " powerline symbols
 let g:airline_left_sep = ''
@@ -162,3 +166,22 @@ let g:syntastic_carp_checkers = ['carp']
 
 " Poliglot
 let g:polyglot_disabled = ['python', 'python-ident']
+
+" CoC.nvim
+" use <tab> for trigger completion and navigate to the next complete item
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction
+
+"inoremap <silent><expr> <Tab>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<Tab>" :
+"      \ coc#refresh()
+
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+

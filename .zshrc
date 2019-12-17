@@ -17,6 +17,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
     archlinux
     extract
+    cargo
     git
     history
     history-substring-search
@@ -28,6 +29,9 @@ plugins=(
     zsh-syntax-highlighting
     z
 )
+
+# Add Path to user completions
+fpath+=~/.local/share/zsh/site-functions
 
 autoload -Uz compinit
 if [ $(date +'%j') != $(date -r ~/.zcompdump +'%j') ]; then
@@ -84,4 +88,5 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias restart-bluetooth="sudo systemctl restart bluetooth"
     alias get-gpu="glxinfo | rg 'server glx vendor string'"
     alias emacs-nw="emacs -nw"
+    alias spotify="flatpak run com.spotify.Client"
 fi

@@ -16,6 +16,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+# Julia interpreter
+set $julia alacritty -e julia
 # Your preferred editors
 set $tui_editor nvim
 set $gui_editor atom
@@ -27,13 +29,16 @@ set $gui_fm dolphin
 # Your preferred screenshot software
 set $screenshot flameshot gui
 # Your preferred application launcher
-set $menu rofi -show run -sidebar-mode
+set $menu rofi -show run -sidebar-mode -matching fuzzy
+# Spotify
+set $music flatpak run com.spotify.Client
 
 # Lock screen fancy
 set $lock ~/.config/i3/i3lock-fancy/lock
 
 ### SET COLORS
-exec wal -i ~/Pictures/Wallpapers/Quadrantids_Duparc_1830.jpg
+exec wal -i ~/Pictures/Wallpapers/nasa-2019-10-14.jpg
+# exec wal -i ~/Pictures/Wallpapers/Quadrantids_Duparc_1830.jpg
 # exec wal -i ~/Pictures/Wallpapers/452.jpg
 # exec feh --bg-scale ~/Pictures/Wallpapers/452.jpg
 set_from_resource $background           i3wm.background
@@ -92,7 +97,7 @@ font pango:Noto Sans 9
 
     # Sreen brightness controls
     bindsym XF86MonBrightnessUp   exec light -A 5   # increase screen brightness
-    bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+    bindsym XF86MonBrightnessDown exec light -U 5   # decrease screen brightness
 
     # Spotify related key bindings
     bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
@@ -163,6 +168,7 @@ font pango:Noto Sans 9
 
     assign [class="Firefox"] "1"
     assign [class="Atom"] "2"
+    assign [class="Spotify Premium"] "3"
 #
 # Layout stuff:
 #
@@ -277,7 +283,9 @@ mode "$mode_gaps_outer" {
     bindsym $mod+a exec $gui_editor
     bindsym $mod+Shift+a exec $tui_editor
     bindsym $mod+p exec $screenshot
-    bindsym $alt+space exec zeal
+    bindsym $mod+Shift+Return exec $julia
+    bindsym $mod+m exec $music
+    # bindsym $alt+space exec zeal
 #
 # Status Bar:
 #
@@ -322,7 +330,8 @@ client.urgent           $color1      $color1        $color0     $color5 $color8
 ### Autostart
 # exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
 exec --no-startup-id /usr/bin/lxqt-policykit-agent
-exec --no-startup-id compton --config ~/.config/awesome/compton.conf -b
+exec --no-startup-id lxqt-notificationd
+exec --no-startup-id picom --config ~/.config/awesome/compton.conf -b
 # exec --no-startup-id xrdb merge ~/.Xresources
 exec --no-startup-id nm-applet
 exec --no-startup-id conky -c ~/.conky/conkyrc -d

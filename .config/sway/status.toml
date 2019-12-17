@@ -14,6 +14,7 @@ backlight_full = "  "
 [[block]]
 block = "music"
 buttons = ["prev", "play", "next"]
+on_collapsed_click = "spotify"
 
 [[block]]
 block = "disk_space"

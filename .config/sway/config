@@ -16,20 +16,24 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty --config-file ~/.config/alacritty/alacritty_sway.yml
+# Julia interpreter
+set $julia $term -e julia
 # Your preferred editors
 set $tui_editor nvim
 set $gui_editor atom
 # Your preferred browser
 set $browser firefox
 # Your prefered filemanagers
-set $tui_fm alacritty --config-file ~/.config/alacritty/alacritty_sway.yml -e ranger
+set $tui_fm $term -e ranger
 set $gui_fm dolphin
 # Your preferred screenshot software
 # set $screenshot flameshot gui
 set $screenshot grim -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu rofi -show run -sidebar-mode | xargs swaymsg exec
+set $menu rofi -show run -sidebar-mode -matching fuzzy | xargs swaymsg exec
+# Spotify
+set $music flatpak run com.spotify.Client
 
 # Lock screen fancy
 set $lock ~/.config/sway/swaylock-fancy/lock
@@ -75,9 +79,14 @@ exec swayidle -w \
 # Example configuration:
 #
 input "1739:32382:DELL0828:00_06CB:7E7E_Touchpad" {
+    accel_profile adaptive
+    # calibration_matrix 0 0 0 0 0 0
+    # click_method none|button_areas|clickfinger
     drag enabled
+    # drag_lock enabled|disabled
     dwt enabled
     tap enabled
+    scroll_factor 0.5
     natural_scroll enabled
     middle_emulation enabled
 }
@@ -141,16 +150,15 @@ input "1133:50484:Logitech_USB_Receiver" {
     bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
     # Spotify related key bindings
-    bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-    bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-    bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-    bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+    # bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+    # bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+    # bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+    # bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
     # Other way for key bind, but not working in spotify
-    # bindsym XF86AudioPlay  exec playerctl play
-    # bindsym XF86AudioPause exec playerctl pause
-    # bindsym XF86AudioNext  exec playerctl next
-    # bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
 #
 # Moving around:
@@ -209,6 +217,9 @@ input "1133:50484:Logitech_USB_Receiver" {
 
     assign [class="Firefox"] "1"
     assign [class="Atom"] "2"
+    assign [class="Spotify Premium"] "3"
+
+    for_window [class=""] floating enable
 #
 # Layout stuff:
 #
@@ -335,7 +346,8 @@ mode "$mode_gaps_outer" {
     bindsym $mod+a exec $gui_editor
     bindsym $mod+Shift+a exec $tui_editor
     bindsym $mod+p exec $screenshot
-    bindsym $alt+space exec zeal
+    bindsym $mod+Shift+Return exec $julia
+    bindsym $mod+m exec $music
 #
 # Status Bar:
 #
@@ -380,11 +392,17 @@ client.focused_inactive $color7      $color7        $color0     $color5 $color8
 client.urgent           $color1      $color1        $color0     $color5 $color8
 
 ### Autostart
-# exec /usr/lib/polkit-1/polkitd --no-debug
-exec /usr/bin/lxqt-policykit-agent &
-exec --no-startup-id nm-applet --sm-disable
+# exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
+exec --no-startup-id /usr/bin/lxqt-policykit-agent
+exec --no-startup-id lxqt-notificationd
+exec --no-startup-id mako
+# exec --no-startup-id picom --config ~/.config/awesome/compton.conf -b
+# exec --no-startup-id xrdb merge ~/.Xresources
+exec --no-startup-id nm-applet
+# exec --no-startup-id conky -c ~/.conky/conkyrc -d
+# exec --no-startup-id indicator-kdeconnect
 exec --no-startup-id blueman-applet
-exec --no-startup-id indicator-kdeconnect
+exec_always --no-startup-id libinput-gestures
 # Remove anoying beep
 # exec --no-startup-id xset b off
 

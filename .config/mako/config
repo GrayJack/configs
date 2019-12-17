@@ -1,0 +1,8 @@
+font=Noto Sans
+background-color=#434046CC
+border-color=#434046CC
+icons=1
+markup=1
+actions=1
+max-visible=5
+default-timeout=10000
