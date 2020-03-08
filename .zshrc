@@ -19,6 +19,7 @@ plugins=(
     extract
     cargo
     git
+    gitignore
     history
     history-substring-search
     jump
@@ -29,6 +30,9 @@ plugins=(
     zsh-syntax-highlighting
     z
 )
+
+# Don't glob if there is no match
+setopt NO_NOMATCH
 
 # Add Path to user completions
 fpath+=~/.local/share/zsh/site-functions
@@ -89,4 +93,8 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias get-gpu="glxinfo | rg 'server glx vendor string'"
     alias emacs-nw="emacs -nw"
     alias spotify="flatpak run com.spotify.Client"
+    alias autenticator="flatpak run com.github.bilelmoussaoui.Authenticator"
+    alias psvscreen="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=1920:height=1080"
+    alias psvscreen_safe="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=960:height=544"
+    alias psvscreen_60fps="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=896:height=504"
 fi

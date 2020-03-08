@@ -37,7 +37,8 @@ set $music flatpak run com.spotify.Client
 set $lock ~/.config/i3/i3lock-fancy/lock
 
 ### SET COLORS
-exec wal -i ~/Pictures/Wallpapers/nasa-2019-10-14.jpg
+exec wal -i ~/Pictures/Wallpapers/2020/yuumei.jpg
+# exec wal -i ~/Pictures/Wallpapers/nasa-2019-10-14.jpg
 # exec wal -i ~/Pictures/Wallpapers/Quadrantids_Duparc_1830.jpg
 # exec wal -i ~/Pictures/Wallpapers/452.jpg
 # exec feh --bg-scale ~/Pictures/Wallpapers/452.jpg
@@ -169,6 +170,8 @@ font pango:Noto Sans 9
     assign [class="Firefox"] "1"
     assign [class="Atom"] "2"
     assign [class="Spotify Premium"] "3"
+
+    for_window [title="Picture-in-Picture"] sticky enable
 #
 # Layout stuff:
 #
@@ -334,7 +337,7 @@ exec --no-startup-id lxqt-notificationd
 exec --no-startup-id picom --config ~/.config/awesome/compton.conf -b
 # exec --no-startup-id xrdb merge ~/.Xresources
 exec --no-startup-id nm-applet
-exec --no-startup-id conky -c ~/.conky/conkyrc -d
+#exec --no-startup-id conky -c ~/.conky/conkyrc -d
 exec --no-startup-id indicator-kdeconnect
 exec --no-startup-id blueman-applet
 exec_always --no-startup-id libinput-gestures
