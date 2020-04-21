@@ -44,6 +44,9 @@ else
   compinit -C
 fi
 
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

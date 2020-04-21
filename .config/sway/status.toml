@@ -53,7 +53,7 @@ format_swap = "{SUm} MB / {STm} MB → {SUp}%"
 display_type = "memory"
 icons = true
 clickable = true
-interval = 1
+interval = 0.5
 warning_mem = 80
 warning_swap = 80
 critical_mem = 95
@@ -62,13 +62,13 @@ critical_swap = 95
 [[block]]
 block = "temperature"
 collapsed = false
-interval = 1
+interval = 0.5
 # format = "{min}° min, {max}° max, {average}° avg"
 format = "{average}°C"
 
 [[block]]
 block = "cpu"
-interval = 1
+interval = 0.5
 frequency = true
 
 # [[block]]
@@ -82,7 +82,7 @@ device = "enp2s0"
 ip = false
 # speed_up = false
 # graph_up = true
-interval = 1
+interval = 0.5
 
 [[block]]
 block = "net"
@@ -91,7 +91,7 @@ ssid = true
 ip = false
 # speed_up = false
 # graph_up = true
-interval = 1
+interval = 0.5
 
 # [[block]]
 # block = "networkmanager"

@@ -18,15 +18,15 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Cargo target dir'
 export RUST_ROOT=~/.cargo/bin
 export CARGO_TARGET_DIR=~/MySources/.cargo_target
-# Maybe add in the future: -Zchalk
-export RUSTFLAGS="-Zunleash-the-miri-inside-of-you"
-#:" -Zexternal-macro-backtrace"
+export RUSTC_WRAPPER=sccache
+# Maybe add in the future: -Zpolonius
+export RUSTFLAGS="-Zunleash-the-miri-inside-of-you -Zmacro-backtrace"
 
 # Janet
 export JANET_MODPATH=~/.local/lib/janet/
 
 # Julia
-export JULIA_NUM_THREADS=8
+export JULIA_NUM_THREADS=4
 
 # R lib dir
 export R_LIBS_USER=~/.R/
@@ -39,21 +39,13 @@ export CARP_DIR=~/.local/lib/carp/
 # Deno
 export DENO_INSTALL="/home/grayjack/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-# Janet Lisp libraries path
-#export JANET_PATH=/usr/lib/janet
-# :~/.local/lib/janet
 
 # Library path for DEVKIT SDK
 export DEVKITPRO=/opt/devkitpro
 export DEVKITARM=/opt/devkitpro/devkitARM
 
 # Path to programs
-#export PATH=/bin:/sbin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/devkitpro/devkitARM/bin:~/.local/bin:~/.cargo/bin/
-export PATH=$PATH:~/.local/bin:~/.local/sbin:~/.cargo/bin:~/.emacs.d/bin:/home/grayjack/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin
-
-
-# Discord bot
-export DISCORD_TOKEN="NjE2NDI1NDUzMDM2NzY1MTg0.XWcZKg.pL6YNsrH14aSlvXcEtEW0JBYGj4"
+export PATH=$PATH:~/.local/bin:~/.local/sbin:~/.cargo/bin:~/.emacs.d/bin:/home/grayjack/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin
 
 
 # >>> conda init >>>

@@ -81,7 +81,7 @@ scrolling:
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
 # change the `it` value in terminfo when altering this setting.
-tabspaces: 4
+# tabspaces: 4
 
 # Font configuration (changes require restart)
 font:
@@ -93,7 +93,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: Hack Nerd Font
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -104,7 +104,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -115,7 +115,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
