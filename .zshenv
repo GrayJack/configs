@@ -66,36 +66,3 @@ export PATH=$PATH:~/.local/bin:~/.local/sbin:~/.cargo/bin:~/.emacs.d/bin:/home/g
 
 # opam configuration
 test -r /home/grayjack/.opam/opam-init/init.zsh && . /home/grayjack/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-##### POWERLEVEL9K CONFIG #####
-# More info on https://github.com/bhilburn/powerlevel9k/wiki/Stylizing-Your-Prompt
-P9K_IGNORE_VAR_WARNING=true
-P9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-#P9K_LEFT_PROMPT_ELEMENTS=(os_icon dir)
-if [[ "$OSTYPE" == linux* ]]; then
-    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-#    P9K_DIR_HOME_BACKGROUND='cyan'
-#    P9K_DIR_DEFAULT_BACKGROUND='cyan'
-#    P9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
-#    P9K_STATUS_OK_BACKGROUND='023'
-    P9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    P9K_PROMPT_ON_NEWLINE=true
-    P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'\u2570\uf460 \ufb26 '
-    P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-    P9K_DIR_SHORTEN_LENGTH=6
-elif [[ "$OSTYPE" == freebsd* ]]; then
-    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-    P9K_DIR_HOME_BACKGROUND='009'
-    P9K_DIR_DEFAULT_BACKGROUND='009'
-    P9K_DIR_HOME_SUBFOLDER_BACKGROUND='009'
-    P9K_COMMAND_EXECUTION_TIME_THRESHOLD='1'
-    P9K_PROMPT_ON_NEWLINE=true
-    P9K_MULTILINE_LAST_PROMPT_PREFIX_ICON=$'\u2570\uf460 '
-    P9K_DIR_SHORTEN_STRATEGY="truncate_from_right"
-    P9K_DIR_SHORTEN_LENGTH=6
-else
-    P9K_RIGHT_PROMPT_ELEMENTS=(status dir_writable background_jobs root_indicator context_joined command_execution_time)
-fi
-P9K_PUBLIC_IP_BACKGROUND='cyan'
-P9K_PUBLIC_IP_FOREGROUND='black'
-P9K_VCS_GIT_GITHUB_ICON=$'\uf113'
