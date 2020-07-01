@@ -58,13 +58,13 @@
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    node_version          # node.js version
-    go_version            # go version (https://golang.org)
-    rust_version          # rustc version (https://www.rust-lang.org)
+    node_version            # node.js version
+    go_version              # go version (https://golang.org)
+    rust_version            # rustc version (https://www.rust-lang.org)
     # dotnet_version        # .NET version (https://dotnet.microsoft.com)
     # php_version           # php version (https://www.php.net/)
     # laravel_version       # laravel php framework version (https://laravel.com/)
-    java_version          # java version (https://www.java.com/)
+    java_version            # java version (https://www.java.com/)
     # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
     rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
     rvm                     # ruby version from rvm (https://rvm.io)
@@ -328,7 +328,7 @@
   # typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
 
   # If the repository is large, or the machine is slow, this computation can take quite a bit of time.
-  typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0.1
+  typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
   # Branch icon. Set this parameter to '\uF126 ' for the popular Powerline branch icon.
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
@@ -388,15 +388,15 @@
     fi
 
     # ⇣42 if behind the remote.
-    (( VCS_STATUS_COMMITS_BEHIND )) && res+=" ${clean}⇣ ${VCS_STATUS_COMMITS_BEHIND}"
+    (( VCS_STATUS_COMMITS_BEHIND )) && res+=" ${clean}⇣${VCS_STATUS_COMMITS_BEHIND}"
     # ⇡42 if ahead of the remote; no leading space if also behind the remote: ⇣42⇡42.
     (( VCS_STATUS_COMMITS_AHEAD && !VCS_STATUS_COMMITS_BEHIND )) && res+=" "
-    (( VCS_STATUS_COMMITS_AHEAD  )) && res+="${clean}⇡ ${VCS_STATUS_COMMITS_AHEAD}"
+    (( VCS_STATUS_COMMITS_AHEAD  )) && res+="${clean}⇡${VCS_STATUS_COMMITS_AHEAD}"
     # ⇠42 if behind the push remote.
-    (( VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" ${clean}⇠ ${VCS_STATUS_PUSH_COMMITS_BEHIND}"
+    (( VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" ${clean}⇠${VCS_STATUS_PUSH_COMMITS_BEHIND}"
     (( VCS_STATUS_PUSH_COMMITS_AHEAD && !VCS_STATUS_PUSH_COMMITS_BEHIND )) && res+=" "
     # ⇢42 if ahead of the push remote; no leading space if also behind: ⇠42⇢42.
-    (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && res+="${clean}⇢ ${VCS_STATUS_PUSH_COMMITS_AHEAD}"
+    (( VCS_STATUS_PUSH_COMMITS_AHEAD  )) && res+="${clean}⇢${VCS_STATUS_PUSH_COMMITS_AHEAD}"
     # *42 if have stashes.
     (( VCS_STATUS_STASHES        )) && res+=" ${clean} ${VCS_STATUS_STASHES}"
     # 'merge' if the repo is in an unusual state.
@@ -514,7 +514,7 @@
   # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND=6
   # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND=0
   # Don't show the number of background jobs.
-  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=false
+  typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE=true
   # Custom icon.
   # typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION='⭐'
 

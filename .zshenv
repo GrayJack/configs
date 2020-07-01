@@ -1,8 +1,8 @@
 # Wayland stuff
-GDK_BACKEND=wayland
-CLUTTER_BACKEND=wayland
+#GDK_BACKEND=wayland
+#CLUTTER_BACKEND=wayland
 
-SWAY_CURSOR_THEME=capitaine-cursors
+#SWAY_CURSOR_THEME=capitaine-cursors
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -11,41 +11,57 @@ else
     export EDITOR='nvim'
 fi
 
-# ssh keys
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+# GPG keys
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 
+# SSH keys
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
+
+# C/C++ config
+export CC=clang
+export CXX=clang++
 
 # Cargo target dir'
-export RUST_ROOT=~/.cargo/bin
-export CARGO_TARGET_DIR=~/MySources/.cargo_target
-export RUSTC_WRAPPER=sccache
-# Maybe add in the future: -Zpolonius
-export RUSTFLAGS="-Zunleash-the-miri-inside-of-you -Zmacro-backtrace"
+export RUST_ROOT="$HOME/.cargo/bin"
+export CARGO_TARGET_DIR="$HOME/.cargo/target"
+export RUSTC_WRAPPER=""
+# Maybe add in the future: -Zchalk -Zpolonius -Zunleash-the-miri-inside-of-you
+export RUSTFLAGS="-Zmacro-backtrace"
 
 # Janet
-export JANET_MODPATH=~/.local/lib/janet/
+export JANET_BINPATH="$HOME/.local/janet/bin"
+export JANET_MODPATH="$HOME/.local/janet"
+export JANET_PATH="$HOME/.local/janet/"
+# export JANET_LIBPATH="$HOME/.local/janet/lib"
+# export JANET_HEADERPATH="$HOME/.local/janet/include/janet"
+export JANET_LIBPATH="/usr/lib"
+export JANET_HEADERPATH="/usr/include/janet"
 
 # Julia
 export JULIA_NUM_THREADS=4
 
 # R lib dir
-export R_LIBS_USER=~/.R/
-export R_LIBS=~/.R/
+export R_LIBS_USER="$HOME/.R/"
+export R_LIBS="$HOME/.R/"
 
 # Carp Lisp
-export CARP_DIR=~/.local/lib/carp/
+export CARP_DIR="$HOME/.local/lib/carp/"
 #export CARP_DIR=~/MySources/CarpProjects/Carp/
 
 # Deno
-export DENO_INSTALL="/home/grayjack/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# Node
+export NODE_PATH="$HOME/.local/lib/node_modules"
+
 # Library path for DEVKIT SDK
-export DEVKITPRO=/opt/devkitpro
-export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPRO="/opt/devkitpro"
+export DEVKITARM="/opt/devkitpro/devkitARM"
 
 # Path to programs
-export PATH=$PATH:~/.local/bin:~/.local/sbin:~/.cargo/bin:~/.emacs.d/bin:/home/grayjack/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/sbin:$HOME/.local/janet/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin"
 
 
 # >>> conda init >>>

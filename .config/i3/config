@@ -18,14 +18,15 @@ set $right l
 set $term alacritty
 set $term2 kitty
 # Julia interpreter
-set $julia alacritty -e julia
+set $julia $term2 -e julia
 # Your preferred editors
 set $tui_editor nvim
 set $gui_editor atom
+set $gui_editor2 code
 # Your preferred browser
 set $browser firefox
 # Your prefered filemanagers
-set $tui_fm alacritty -e ranger
+set $tui_fm $term2 -e ranger
 set $gui_fm dolphin
 # Your preferred screenshot software
 set $screenshot flameshot gui
@@ -37,23 +38,31 @@ set $music flatpak run com.spotify.Client
 # Lock screen fancy
 set $lock ~/.config/i3/i3lock-fancy/lock
 
+exec dyn-wall-rs -a ~/Pictures/Wallpapers/2020/Lakeside/
 ### SET COLORS
-exec wal -i ~/Pictures/Wallpapers/2020/yuumei.jpg
+# exec wal -q -i ~/Pictures/Wallpapers/2020/yuumei.jpg
 # exec wal -i ~/Pictures/Wallpapers/nasa-2019-10-14.jpg
 # exec wal -i ~/Pictures/Wallpapers/Quadrantids_Duparc_1830.jpg
 # exec wal -i ~/Pictures/Wallpapers/452.jpg
 # exec feh --bg-scale ~/Pictures/Wallpapers/452.jpg
-set_from_resource $background           i3wm.background
-set_from_resource $foreground           i3wm.foreground
-set_from_resource $color0               i3wm.color0
-set_from_resource $color1               i3wm.color1
-set_from_resource $color2               i3wm.color2
-set_from_resource $color3               i3wm.color3
-set_from_resource $color4               i3wm.color4
-set_from_resource $color5               i3wm.color5
-set_from_resource $color6               i3wm.color6
-set_from_resource $color7               i3wm.color7
-set_from_resource $color8               i3wm.color8
+# set_from_resource $background           #242424
+# set_from_resource $foreground           #F9F5DD
+# set_from_resource $color0               #363338
+# set_from_resource $color1               #FF3574
+# set_from_resource $color2               #B2E64C
+# set_from_resource $color3               #E6DB7A
+# set_from_resource $color4               #5596F1
+# set_from_resource $color5               #FF5794
+# set_from_resource $color6               #66CCE1
+# set_from_resource $color7               #F9F5DD
+# set_from_resource $color8               #3C393E
+# set_from_resource $color9               #FAA23D
+# set_from_resource $color10              #B2E64C
+# set_from_resource $color11              #E6DB7A
+# set_from_resource $color12              #AA7DFC
+# set_from_resource $color13              #FA8282
+# set_from_resource $color14              #66CCE1
+# set_from_resource $color15              #716A60
 
 ### Fonts
 # font pango:Noto Sans 9
@@ -68,8 +77,8 @@ font pango:Fira Sans 10
 # Basics:
 #
     # start a terminal
-    bindsym $mod+Return exec $term
-    bindsym $alt+Return exec $term2
+    bindsym $mod+Return exec $term2
+    # bindsym $alt+Return exec $term2
 
     # kill focused window
     bindsym $mod+x kill
@@ -105,16 +114,19 @@ font pango:Fira Sans 10
     bindsym XF86MonBrightnessDown exec light -U 5   # decrease screen brightness
 
     # Spotify related key bindings
-    bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-    bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-    bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-    bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+    # bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+    # bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+    # bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+    # bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
     # Other way for key bind, but not working in spotify
     # bindsym XF86AudioPlay  exec playerctl play
     # bindsym XF86AudioPause exec playerctl pause
     # bindsym XF86AudioNext  exec playerctl next
     # bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioNext exec playerctl next
+    bindsym XF86AudioPrev exec playerctl previous
 
 #
 # Moving around:
@@ -293,7 +305,7 @@ mode "$mode_gaps_outer" {
     bindsym $mod+Shift+e exec $tui_fm
     bindsym $mod+b exec $browser
     bindsym $mod+a exec $gui_editor
-    bindsym $mod+Shift+a exec $tui_editor
+    bindsym $mod+Shift+a exec $gui_editor2
     bindsym $mod+p exec $screenshot
     bindsym $mod+Shift+Return exec $julia
     bindsym $mod+m exec $music
@@ -318,14 +330,14 @@ bar {
     status_command i3status-rs ~/.config/sway/status.toml
 
     colors {
-        #                     border        background        text
-        focused_workspace     $color6       $color6         $background
-        inactive_workspace    $background   $background     $foreground
-        urgent_workspace      $color1       $color1         $foreground
-        background            $background
-        #statusline #ffffff
-        #background #323232
-        #inactive_workspace #323232 #323232 #5c5c5c
+        background         #242424
+
+        # <colorclass>    <border> <background> <text>
+        focused_workspace  #C0F753 #B2E64C #242424
+        active_workspace   #6EE0F7 #66CCE1 #242424
+        inactive_workspace #716A60 #434046 #F9F5DD
+        urgent_workspace   #FA8282 #FF3574 #242424
+        binding_mode       #CC8D66 #CC8D66 #242424
     }
 }
 
@@ -334,11 +346,14 @@ for_window [class="^.*"] border pixel 2
 default_border pixel 2
 
 ### Window colors
-#                       border       background     text        indicator
-client.focused          $color6      $color6        $color0     $color5 $color8
-client.unfocused        $color3      $color3        $color0     $color5 $color8
-client.focused_inactive $color7      $color7        $color0     $color5 $color8
-client.urgent           $color1      $color1        $color0     $color5 $color8
+# <colorclass>         <border> <background> <text> <indicator> <child_border>
+client.focused          #6EE0F7 #66CCE1 #242424 #6EE0F7   #66CCE1
+client.focused_inactive #716A60 #434046 #F9F5DD #716A60   #434046
+client.unfocused        #716A60 #434046 #F9F5DD #716A60   #434046
+client.urgent           #FA8282 #FF3574 #242424 #FA8282   #FF3574
+client.placeholder      #000000 #0c0c0c #242424 #000000   #0c0c0c
+
+# client.background       #ffffff
 
 ### Autostart
 # exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
@@ -346,7 +361,7 @@ exec --no-startup-id /usr/bin/lxqt-policykit-agent
 exec --no-startup-id lxqt-notificationd
 exec --no-startup-id picom --config ~/.config/awesome/compton.conf -b
 # exec --no-startup-id xrdb merge ~/.Xresources
-exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet --sm-disable
 #exec --no-startup-id conky -c ~/.conky/conkyrc -d
 exec --no-startup-id indicator-kdeconnect
 exec --no-startup-id blueman-applet
