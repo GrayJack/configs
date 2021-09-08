@@ -99,6 +99,16 @@ fe() {
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 if [[ "$OSTYPE" == linux* ]]; then
+    alias xs="exa"
+    alias xl="exa -l"
+    alias ls="lsd"
+    alias ll="lsd -l"
+    alias ltree="lsd --tree"
+    alias lsl="lsd -l"
+    alias lstree="lsd --tree"
+    alias grep="rg"
+    alias du="dust"
+    alias find="fd"
     alias clean-cache="echo 3 | sudo tee /proc/sys/vm/drop_caches"
     alias restart-bluetooth="sudo systemctl restart bluetooth"
     alias get-gpu="glxinfo | rg 'server glx vendor string'"

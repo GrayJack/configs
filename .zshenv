@@ -18,6 +18,10 @@ gpgconf --launch gpg-agent
 # SSH keys
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
+# DevKitPro
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+
 # C/C++ config
 export CC=clang
 export CXX=clang++
@@ -26,8 +30,9 @@ export CXX=clang++
 export RUST_ROOT="$HOME/.cargo/bin"
 export CARGO_TARGET_DIR="$HOME/.cargo/target"
 export RUSTC_WRAPPER=""
-# Maybe add in the future: -Zchalk -Zpolonius -Zunleash-the-miri-inside-of-you
-export RUSTFLAGS="-Zmacro-backtrace"
+# Maybe add in the future: -Zchalk -Zpolonius -Zunleash-the-miri-inside-of-you -Zshare-generics=y
+# export RUSTFLAGS="-Clink-arg=-fuse-ld=lld -Zmacro-backtrace"
+# export RUSTFLAGS="-Zmacro-backtrace"
 
 # Janet
 export JANET_BINPATH="$HOME/.local/janet/bin"
@@ -37,6 +42,7 @@ export JANET_PATH="$HOME/.local/janet/"
 # export JANET_HEADERPATH="$HOME/.local/janet/include/janet"
 export JANET_LIBPATH="/usr/lib"
 export JANET_HEADERPATH="/usr/include/janet"
+export JANET_MANPATH="$HOME/.local/share/man"
 
 # Julia
 export JULIA_NUM_THREADS=4
@@ -54,14 +60,19 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Node
-export NODE_PATH="$HOME/.local/lib/node_modules"
+export NODE_PATH="$HOME/.local/node_modules"
+export NPM_STORE="${HOME}/.local/node_modules"
 
 # Library path for DEVKIT SDK
 export DEVKITPRO="/opt/devkitpro"
 export DEVKITARM="/opt/devkitpro/devkitARM"
 
+# Go
+export GOMODCACHE="$HOME/.local/go/pkg/mod"
+export GOPATH="$HOME/.local/go/"
+
 # Path to programs
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/sbin:$HOME/.local/janet/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin"
+export PATH="$PATH:$HOME/.local/node_modules/vsce/out:$HOME/.local/bin:$HOME/.local/sbin:$HOME/.local/janet/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin:$GOPATH/bin:$HOME/.dotnet/tools:$NPM_STORE/bin"
 
 
 # >>> conda init >>>

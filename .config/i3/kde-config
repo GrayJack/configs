@@ -22,11 +22,11 @@ set $julia $term2 -e julia
 # Your preferred editors
 set $tui_editor nvim
 set $gui_editor atom
-set $gui_editor2 code-insiders --enable-proposed-api
+set $gui_editor2 code-insiders --enable-proposed-api GitHub.vscode-pull-request-github
 # Your preferred browser
 set $browser firefox
 # Your prefered filemanagers
-set $tui_fm $term2 -e ranger
+# set $tui_fm $term2 -e ranger
 set $gui_fm dolphin
 # Your preferred screenshot software
 set $screenshot flameshot gui
@@ -99,18 +99,11 @@ font pango:Fira Sans 10
     # lock screen
     bindsym $mod+Ctrl+l exec $lock
 
-    # exit sway (logs you out of your XOrg session)
-    bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+    # using plasma's logout screen instead of i3's
+    bindsym $mod+Shift+e exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 #
 # I/O configuration
 #
-    # Set automatic screen
-    # my laptop's internal screen
-    # external screen, they are set here to make it easier to move to new setups
-    set $monitor eDP-1
-    set $monitor2 HDMI-1
-    bindsym XF86Search exec sh ~/.i3/scripts/screencheck.sh $monitor $monitor2
-
     # Set a volume control with AudioPulse
     bindsym XF86AudioRaiseVolume exec amixer -q set Master -q 5%+
     bindsym XF86AudioLowerVolume exec amixer -q set Master -q 5%-
@@ -198,7 +191,35 @@ font pango:Fira Sans 10
     assign [class="(?i)code"] 2
     assign [class="(?i)spotify"] 1
 
+    # Firefox picture in picture of Firefox
     for_window [title="Picture-in-Picture"] sticky enable
+
+    # Don’t treat Plasma pop-ups as full-sized windows
+    for_window [class="plasmashell"] floating enable
+
+    # Don’t spawn an empty window for the Plasma Desktop
+    for_window [title="Desktop — Plasma"] kill, floating enable, border none
+
+    # Don’t let notifications and non-interactive pop-up windows steal focus
+    no_focus [class="plasmashell" window_type="notification"]
+    # no_focus [class="plasmashell" window_type="on_screen_display"]
+
+    # Plasma compatibility improvements
+    for_window [window_role="pop-up"] floating enable
+    for_window [window_role="task_dialog"] floating enable
+    for_window [class="yakuake"] floating enable
+    for_window [class="systemsettings"] floating enable
+    for_window [class="plasmashell"] floating enable;
+    for_window [class="Plasma"] floating enable; border none
+    for_window [title="plasma-desktop"] floating enable; border none
+    for_window [title="win7"] floating enable; border none
+    for_window [class="krunner"] floating enable; border none
+    for_window [class="Kmix"] floating enable; border none
+    for_window [class="Klipper"] floating enable; border none
+    for_window [class="Plasmoidviewer"] floating enable; border none
+    for_window [class="(?i)*nextcloud*"] floating disable
+    for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
+    no_focus [class="plasmashell" window_type="notification"]
 #
 # Layout stuff:
 #
@@ -313,7 +334,7 @@ mode "$mode_gaps_outer" {
 # User Variables
 #
     bindsym $mod+q exec $gui_fm
-    bindsym $mod+Shift+e exec $tui_fm
+    # bindsym $mod+Shift+e exec $tui_fm
     bindsym $mod+b exec $browser
     bindsym $mod+a exec $gui_editor2
     bindsym $mod+Shift+a exec $gui_editor
@@ -338,7 +359,7 @@ bar {
     #     -m spotify memory sensors cpu brightness pasink bluetooth nic battery date time \
     #     -p memory.format="{used}/{total}" time.format="%H:%M" date.format="%d/%m/%Y" \
     #     -t iceberg-rainbow
-    status_command i3status-rs
+    # status_command i3status-rs
 
     colors {
         background         #242424
@@ -368,14 +389,14 @@ client.placeholder      #000000 #0c0c0c #242424 #000000   #0c0c0c
 
 ### Autostart
 # exec --no-startup-id /usr/lib/polkit-1/polkitd --no-debug
-exec --no-startup-id /usr/bin/lxqt-policykit-agent
-exec --no-startup-id lxqt-notificationd
+# exec --no-startup-id /usr/bin/lxqt-policykit-agent
+# exec --no-startup-id lxqt-notificationd
 exec_always --no-startup-id picom --config ~/.config/awesome/compton.conf -b
 # exec --no-startup-id xrdb merge ~/.Xresources
-exec --no-startup-id nm-applet --sm-disable
+# exec --no-startup-id nm-applet --sm-disable
 # exec --no-startup-id conky -c ~/.conky/conkyrc -d
 # exec --no-startup-id indicator-kdeconnect
-exec --no-startup-id blueman-applet
+# exec --no-startup-id blueman-applet
 # exec_always --no-startup-id libinput-gestures
 # Remove anoying beep
 exec --no-startup-id xset b off
