@@ -45,7 +45,7 @@ export JANET_HEADERPATH="/usr/include/janet"
 export JANET_MANPATH="$HOME/.local/share/man"
 
 # Julia
-export JULIA_NUM_THREADS=4
+export JULIA_NUM_THREADS=7
 
 # R lib dir
 export R_LIBS_USER="$HOME/.R/"
@@ -70,6 +70,9 @@ export DEVKITARM="/opt/devkitpro/devkitARM"
 # Go
 export GOMODCACHE="$HOME/.local/go/pkg/mod"
 export GOPATH="$HOME/.local/go/"
+
+# Java
+export JAVA_HOME="/usr/lib/jvm/default"
 
 # Path to programs
 export PATH="$PATH:$HOME/.local/node_modules/vsce/out:$HOME/.local/bin:$HOME/.local/sbin:$HOME/.local/janet/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.local/bin/MATLAB/R2019a/bin:$DENO_INSTALL/bin:$HOME/.opam/default/bin:$HOME/.opam/default/sbin:$HOME/.nix-profile/bin:$GOPATH/bin:$HOME/.dotnet/tools:$NPM_STORE/bin"

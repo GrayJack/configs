@@ -25,7 +25,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     archlinux
     extract
-    cargo
     git
     gitignore
     history
@@ -118,6 +117,7 @@ if [[ "$OSTYPE" == linux* ]]; then
     alias psvscreen="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=1920:height=1080"
     alias psvscreen_safe="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=960:height=544"
     alias psvscreen_60fps="mplayer tv:// -tv driver=v4l2:device=/dev/video0:width=896:height=504"
+    alias git-config-ba="git config user.email 'shimizu@brickabode.com' && git config user.name 'EricShimizuKarbstein'"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -126,3 +126,6 @@ fi
 export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
+
+# opam configuration
+[[ ! -r /home/grayjack/.opam/opam-init/init.zsh ]] || source /home/grayjack/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

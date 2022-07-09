@@ -1,10 +1,9 @@
 [user]
 	email = gr41.j4ck@gmail.com
 	name = GrayJack
-	signingkey = AAB9931E
-[commit]
-	gpgSign = true
-[tag]
-	gpgSign = true
+[diff]
+	colorMoved = zebra
 [pull]
-	ff = only
+	rebase = true
+[rebase]
+	autoStash = true

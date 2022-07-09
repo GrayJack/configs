@@ -1,0 +1,2110 @@
+mkdir ~/.cache/starship
+starship init nu | save ~/.cache/starship/init.nu
+$nu.config-path
+cat ~/.cache/init
+cat ~/.cache/init.nu
+cat ~/.cache/starship/init.nu
+cd ./MySources/
+cd ./BrickAbode/
+cd ./FEE-Jellyfish/tracking/
+cd /root
+cd /
+cd tmp
+cd ./.XIM-unix/
+cd ./MySources/RustProjects/janetrs/
+s
+sudo
+cat ~/.cache/starship/init.nu
+nvim ~/.cache/starship/init.nu
+cd ./MySources/RustProjects/janetrs/
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O ~/.local/bin/oh-my-posh
+sudo chmod +x ~/.local/bin/oh-my-posh
+cd
+mkdir ~/.poshthemes
+wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
+unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
+chmod u+rw ~/.poshthemes/*.json
+rm ~/.poshthemes/themes.zip
+cd ./MySources/RustProjects/janetrs/
+cd ./janetrs_version/src/
+cd
+cd ./MySources/RustProjects/janetrs/
+cd ..
+cd ./RustProjects/janetrs/.git/
+cd ..
+cd ./janetrs_macros/
+cd a
+/bin/cd a
+/usr/bin/cd a
+wget a
+fail
+false
+c
+cargo
+cargo build
+cd
+cargo build
+ls
+cd
+ls
+cd ./MySources/RustProjects/janetrs/
+cd
+ls
+cd ./MySources/RustProjects/janetrs/
+sudo su
+cd
+ls
+cd a
+ls | select name
+z
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd
+true
+bool
+echo $PATH
+echo env.Path
+env.Path
+env
+nu
+diff 
+diff ./questao1.m ../questao1.m
+diff ./questao1.m ../questao1.m --help
+diff ./questao1.m ../questao1.m --color=always
+ls
+ls --help
+sudo su
+10
+10 + 10
++ 1 2 3
+"asdn"
+var
+def
+diff ../MCAE_2022_trelica_estabilidade.m ../questao1.m --color=always
+cp ../MCAE_2022_trelica_estabilidade.m ./FINAL_CAROL/q1.m
+cp ../MCAE_2022_portico_estatica_ex_1_4.m ./FINAL_CAROL/q2.m
+cp ../MCAE_2022_portico_vibracoes.m ./FINAL_CAROL/q3.m
+l --help
+sudo --aaaa
+sudo -h
+10 + 10
+10 + 10 / 10
+sqrt
+cd aaa
+/bin/cd --help
+llllllllllllllll
+13.0
+cd ./MySources/RustProjects/rust-analyzer/
+cd ./MySources/
+cd
+cd ./Music/
+cd ../Pictures/DarkPapers/
+cd ..
+cd ../Pictures/DarkPapers/
+cd ..
+cd ./Pictures/
+cd
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+rustup update
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash pop
+cargo install-ra
+cargo clean
+cargo install-ra
+bat ~/.ssh/config
+h
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+deno upgrade
+cargo install-ra
+sudo pacman -Syyu
+sudo nvim /etc/passwd
+dyn-wall-rs -d ~/Pictures/Wallpapers/2020/Lakeside/ -p "feh --bg-scale"
+cargo
+help
+help commands
+cal
+ls ~/.cargo/bin
+mdbook
+echo $PATH
+echo $env.Path
+echo $env.PATH
+echo $env.ENV
+echo $env.ENV_CONVERSIONS
+echo $env.ENV_CONVERSIONS.PATH
+echo $env.ENV_CONVERSIONS.PATH.to_string
+$env.ENV_CONVERSIONS.PATH.to_string
+$env.ENV_CONVERSIONS.PATH.to_string(<\n>)
+$env.ENV_CONVERSIONS.PATH.to_string
+do $env.ENV_CONVERSIONS.FOO.from_string 'a-b-c'
+do $env.ENV_CONVERSIONS.PATH.from_string 'a-b-c'
+do $env.ENV_CONVERSIONS.PATH.to_string 'a-b-c'
+do $env.ENV_CONVERSIONS.PATH.to_string
+$env.ENV_CONVERSIONS.PATH.to_string()
+$env.ENV_CONVERSIONS.PATH.to_string
+$env.PATH
+append --help
+$env.PATH
+mdbook
+htop
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+ ]
+ 
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+help str
+du
+du --help
+du -a
+du -a -d 3
+ll
+rm --help
+rm -rf xaa
+grep
+grep --help
+find --help
+clean-cache
+find
+zsh
+cd ./Source/AUR/visual-studio-code-insiders/
+ls
+rm -rf *.tar.* src pkg janet && makepkg -i
+zsh
+julia
+juliaup upgrade
+juliaup update
+rustup update
+cargo search nu_plugin
+cd ./MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo clean
+cargo install-ra
+cd
+cd ./Source/
+git clone https://github.com/mjansson/rpmalloc.git
+cd ..
+git clone git@github.com:GrayJack/oxiallocator.git
+cd ./oxiallocator/
+cargo init -l
+cargo init --lib
+cd ./MySources/RustProjects/rust-analyzer/
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+code-insiders --help
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+rust-analyzer
+rust-analyzer --verion
+rust-analyzer --vesion
+rust-analyzer --version
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet && makepkg -i
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+ls ~/.cargo/bin
+ssh epic-testnet0sa
+ssh epic-testnet-sa
+git checkout master
+git pull
+git branch -D weekly-update
+git checkout weekly-update
+git push -u origin weekly-update
+bat ~/.ssh/config
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+ls
+ll
+chown --help
+chown grayjack:grayjack ./chain_data/
+sudo chown grayjack:grayjack ./chain_data/
+sudo chown grayjack:grayjack ./chain_data/*
+zip --help
+/bin/zip
+/bin/zip -r chain_data ./chain_data/
+sudo /bin/zip -r chain_data ./chain_data/
+ll
+cd ~/MySources/RustProjects/rust-analyzer/
+cargo clean
+cd ~/MySources/BrickAbode/EPIC/
+scp ./epic_2.17.0-1_amd64.deb epic-testnet-sa:./
+ls
+git push -u origin v2_floo_no_progpow
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git checkout automated-wallet-tests
+git switch automated-wallet-tests
+git stash
+git switch automated-wallet-tests
+git checkout automated-wallet-tests
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ..
+sha256sum ./foundation_floonet.json
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git checkout 3.0.0
+cd epic
+git checkout 3.0.0
+git stash
+git checkout 3.0.0
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo clean
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash pop
+cargo install-ra
+htop
+rustup update
+cargo clean
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+deno upgrade
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+ssh epic-mainnet-sa
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+ssh epic-mainnet-sa
+cargo install-ra
+cargo clean
+cd ..
+zsdh
+scp ./epic_3.0.0_amd64.deb epic-testnet-sa:./
+git pull
+ls
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+bat ~/.ssh/config
+nvim ~/.config/nushell/config.nu
+bat ~/.ssh/config
+cat ~/.ssh/config
+ls ~/.epic
+ls ~/.epic/floo
+scp ./epic_3.0.0_amd64.deb epic-testnet-sa:./
+ls ..
+ls .. | select .deb
+ls .. | select deb
+ls .. | where deb
+ls .. | where name
+ping 15.229.177.64
+ping 15.229.31.27
+ping 15.229.31.27:23414
+ping --help
+ping 15.229.31.27:23414
+scp ./epic_3.0.0_amd64.deb epic-testnet-sa:./
+scp ../epic_3.0.0_amd64.deb epic-testnet-sa:./
+sudo chown grayjack:grayjack *
+cargo clean
+sudo cargo clean
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/MySources/RustProjects/rust-analyzer/
+cargo clean
+git push -u origin v3_custom_config_for_testnets
+ll
+git commit -m "feat: try to make testnets super easy to mine"
+git stash pop
+sudo git commit -m "feat: try to make testnets super easy to mine"
+git commit -m "feat: try to make testnets super easy to mine"
+ls
+git commit -m "fix: Only tries to download the mainnet snapshot on mainnet"
+chown grayjack:grayjack .git/*
+sudo chown grayjack:grayjack .git/*
+git commit -m "fix: Only tries to download the mainnet snapshot on mainnet"
+ls .git
+ll .git
+ll .git/objects
+sudo chown grayjack:grayjack .git/objects/*
+git push -u origin v2_custom_config_for_testnets
+git checkout v3_custom_config_for_testnets 
+scp ../epic_2.17.0-1_amd64.deb epic-testnet-sa:./
+git stash
+git push
+git checkout v3_custom_config_for_testnets 
+git stash 
+git checkout v3_custom_config_for_testnets 
+git stash 
+git checkout v3_custom_config_for_testnets 
+scp ../epic_3.0.0_amd64.deb epic-testnet-sa:./
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+ssh epic-testnet-sa
+ll
+sudo chown grayjack:grayjack *
+ll
+sudo rm -rf ./chain_data_bkp/ ./chain_data.zip
+ll
+ll ./chain_data/
+ll ./chain_data/header/
+sudo chown grayjack:grayjack */*/*
+ll ./chain_data/header/
+sudo chown grayjack:grayjack */*/*/*
+sudo chown grayjack:grayjack */*/*/*/*
+tar -czvf chain_data.tar.gz chain_data
+sudo tar -czvf chain_data.tar.gz chain_data
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+deno upgrade
+cd ~/MySources/RustProjects/rust-analyzer/
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo clean
+cd ./MySources/BrickAbode/EPIC/epic
+rm -rf ./target/
+sudo rm -rf ./target/
+cd ../epic-wallet/
+sudo rm -rf ./target/
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+sudo pacman -Syyu
+str find-replace --help
+str --help
+str replace -h
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash pop
+killall code-insiders
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+code-insiders .
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+doxyrun
+doxy
+zsh
+doxygen ./Doxyfile
+rustup update
+cargo clean
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+./update-janet.sh
+cargo update
+cargo publish
+cd ./MySources/
+mkdir ShakaCode
+cd ./ShakaCode/
+mkdir HiChee
+cd ./HiChee/
+git clone git@github.com:shakacode/vrbestprice.git
+./scripts/local/setup.sh
+sudo pacman -Ss postgree
+sudo pacman -Ss postgre
+sudo pacman -Ss postgresql
+sudo pacman -Syy postgresql
+opam upgrade
+opam update && opam upgrade
+opam update
+opam upgrade
+cargo clean
+zsh
+o
+opam upgrade
+cd ./MySources/ShakaCode/HiChee/vrbestprice/
+opam update
+sudo pacman -S yarn
+./scripts/local/setup.sh
+opam clean
+cd
+./scripts/local/setup.sh
+zsh
+cd ./Source/mold/
+git pull
+make -j7
+cp ./mold ~/.local/bin/
+ll ~/local/bin
+ll ~/.local/bin
+cd ~/Source/AUR/visual-studio-code-insiders/
+ls
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+cargo update
+cd ./janetrs_macros/
+cargo update
+cd ../janetrs_version/
+cargo update
+cd ..
+julia
+juliaup update
+juliaup --help
+juliaup status
+julia src/main
+julia src/main.jl
+cog --help
+cog check -h
+cog check -l
+cd ~/MySources/RustProjects/rust-analyzer/
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+sudo pacman -Syy dotnet-sdk
+dotnet --help
+cd ~/MySources/
+mkdir DotNet
+cd DotNet
+dotnet new --help
+dotnet new -n test
+dotnet new -n test --list
+dotnet new console -n test
+dotnet new console -n test -lang F#
+dotnet new console -n test2 -lang F#
+dotnet new console -n test2 -lang fsharp
+dotnet new console -n test2 -lang 
+dotnet new console -n test2 -lang f
+dotnet new console -n test2 -lang f#
+dotnet new console -n test2 -lang f\#
+dotnet new console -n test2 -lang "F#"
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+julia src/gui.jl
+shutdown now
+julia src/gui.jl
+cd '~/Downloads/Projeto 2.2/'
+julia src/gui.jl
+ll
+cd './Projeto 2.2/'
+julia src/gui.jl
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo update --help
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+ls --all --du | sort-by size
+ls --all  | sort-by size
+ls --all --du | sort-by size
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+sudo pacman -Ss jpegoptim
+sudo pacman -S jpegoptim
+cd ./MySources/grayjack.github.io/
+cd ./assets/
+jpegoptim -d compressed 
+mkdir compressed
+ls
+jpegoptim -d compressed avatar.jpg
+cd ./compressed/
+jpegoptim avatar.jpg
+jpegoptim --size=1024k avatar.jpg
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+./scripts/local/setup.sh
+cd ./parser/
+cargo build
+cd ..
+src
+source
+source ./scripts/local/set_environment.sh
+emacs
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash pop
+cargo install-ra
+cd ~/MySources/RustProjects/rust-analyzer/
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+rustup update
+cd ~/MySources/AUR/janet-lang-git/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U ./janet-lang-git-1.21.2.r3396.c38d9134-1-x86_64.pkg.tar.zst
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+nvim ./.cargo/config.toml
+cargo clean
+cargo install-ra
+htop
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+ls
+killall code-insiders
+cd ~/Source/AUR/visual-studio-code-insiders/
+sudo pacman -U ./visual-studio-code-insiders-1650610268-1-x86_64.pkg.tar.zst
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+rustup list
+rustup show
+cargo +stable --version
+8 * 4
+cargo update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U ./visual-studio-code-insiders-1650610268-1-x86_64.pkg.tar.zst
+deno upgrade
+npm -i -g reanalyze
+npm i -g reanalyze
+opam update
+opam upgrade
+mam memset
+man
+man memset
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+ /home/grayjack/.vscode-insiders/extensions/vadimcn.vscode-lldb-1.7.0/adapter/codelldb terminal-agent --connect=38451  /home/grayjack/.vscode-insiders/extensions/vadimcn.vscode-lldb-1.7.0/adapter/codelldb terminal-agent --connect=41231 
+ /home/grayjack/.vscode-insiders/extensions/vadimcn.vscode-lldb-1.7.0/adapter/codelldb terminal-agent --connect=35075 
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git stash pop
+cargo install-ra
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+./scripts/local/setup.sh
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ./MySources/ShakaCode/
+git clone git@github.com:CollabCreators/shakacode-instagram-scraper.git
+docker-compose up
+cargo run --bin setup
+cargo clean
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+rm -rf ~/.cargo/target/
+rustup update
+cargo install-ra
+cargo run --bin setup
+sudo rm -rf ./target/
+cd ../epic-wallet/
+sudo rm -rf ./target/
+cd ..
+ls --all --du | sort-by size
+sudo rm -rf *
+cargo run --bin setup
+cargo run -p executor -- -u 3
+git checkout single-video
+ls
+cargo run --bin setup
+cargo run -p executor -- -u 3
+cargo run -p executor -- --help
+cargo run -p executor -- user --help
+cargo run -p executor -- users --help
+cargo run -p executor -- users -u 3
+sudo pacman -Syy
+git pull
+git stash
+git pull
+./scripts/local/setup.sh
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo run -p executor -- videos --help
+cargo run -p executor -- video --help
+cargo run --bin aws s3 list
+cargo run -p executor -- users -u 4
+cargo run --bin aws s3 list
+cargo run -p executor -- users -u 4
+docker-compose up
+cargo run --bin setup
+cargo run -p executor -- users -u 4
+cargo run --bin aws s3 list
+cargo run -p executor -- users -u 4
+cargo run -p executor -- users -u 1
+docker ps
+./scripts/local/setup.sh
+psql postgresql://vrbp:vrbp@localhost:5432/vrbp
+postgresql://postgres:postgres@localhost:5432/vrbp
+psql postgresql://postgres:postgres@localhost:5432/vrbp
+./scripts/local/setup.sh
+killall code-insiders
+killall droidcam
+./scripts/local/setup.sh
+psql postgresql://postgres:postgres@localhost:5432/vrbp
+./scripts/local/setup.sh
+htop
+deno upgrade
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/mold/
+git pull
+make -j7
+cp ./mold ~/.local/bin/
+htop
+sudo htop
+cargo run -p executor -- users -u 3
+cargo run --bin setup
+cargo run -p executor -- users -u 3
+cargo run --bin aws s3 list
+cargo run -p executor -- users -u 5
+cargo run --bin aws s3 list
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo xtask install
+nvim ./.cargo/config.toml
+code-insiders .
+cargo clean
+cargo check
+cargo xtask install
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+julia src/gui.jl
+cd './Downloads/Projeto 2.2/'
+julia src/gui.jl
+cd './Projeto 2.2/'
+julia src/gui.jl
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo clean
+julia src/gui.jl
+sudo pacman -Syyu
+sudo pacman -Syy nvidia-utils
+sudo pacman -R linux510-nvidia linux516-nvidia
+sudo pacman -Sy nvidia-utils
+sudo pacman -Su
+sudo pacman -S linux510-nvidia linux516-nvidia
+reboot
+sudo pacman -Ss manjaro
+sudo pacman -S manjaro-setting-manager
+sudo pacman -S manjaro-settings-manager
+sudo pacman -S manjaro-settings-manager-kcm
+sudo pacman -Ss manjaro-settings-manager
+sudo pacman -Ss manjaro-settings-manager-knotifier
+sudo pacman -S manjaro-settings-manager-knotifier
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+./scripts/local/setup.sh
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+./scripts/local/setup.sh
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo clean
+cargo install-ra
+killall chromium
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+rustup update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra]
+cargo install-ra
+cargo clean
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+shutdown now
+deno upgrade
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+cargo clean
+cd ~/Applications/
+VBoxManage modifyvm "Mac OS 12" –-cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage modifyvm "Mac OS 12" –-cpuid set 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage modifyvm "Mac OS 12" –-help
+VBoxManage modifyvm "Mac OS 12" –-cpuid-set 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage modifyvm "Mac OS 12" --cpuid-set 00000001 000106e5 00100800 0098e3fd bfebfbff
+cd ~/Applications/
+VBoxManage modifyvm "Mac OS 12" --cpuid-set 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "MacBookPro15,1"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-551B86E5744E2388"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+cd ./MySources/ShakaCode/shakacode-instagram-scraper/
+cargo clean
+cd ../HiChee/vrbestprice/
+cargo clean
+cd ./parser/
+cargo clean
+cd /mnt/
+cd ./base/
+ls --all --du | sort-by size
+cd ./.cargo/
+ls
+ls --all --du | sort-by size
+rm -rf ./registry/ git
+cd ../MySources/
+ls --all --du | sort-by size
+cd ./RustProjects/
+ls --all --du | sort-by size
+cd ./oxilibc/
+cargo clean
+cd ../janetrs/
+cargo clean
+cd ../tests/
+cargo clean
+cd
+cd './VirtualBox VMs/'
+ls
+VBoxManage modifyvm "Mac OS 12" --cpuid-set 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "MacBookPro15,1"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-551B86E5744E2388"
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ./Downloads/matlab_R2022a_glnxa64/
+ls
+ll
+./install
+chmod +x ./install
+./install
+cd ../matlab_R2022a_glnxa64/
+./install
+ls bin
+ls bin/glnxa64/
+./install
+ll bin/glnxa64/ | rg "cudata"
+ll bin/glnxa64/
+rm bin/glnxa64/libicudata.so.69
+ln -s bin/glnxa64/libicudata.so.69.1 bin/glnxa64/libicudata.so.69
+./install
+ll bin/glnxa64/
+rm bin/glnxa64/libicudata.so.69
+cp bin/glnxa64/libicudata.so.69.1 bin/glnxa64/libicudata.so.69
+cd ../matlab_R2022a_glnxa64/
+ls
+./install
+rm bin/glnxa64/libicudata.so.69
+cp bin/glnxa64/libicudata.so.69.1 bin/glnxa64/libicudata.so.69
+./install
+ls bin
+./install
+rm bin/glnxa64/libicui18n.so.69
+cp bin/glnxa64/libicui18n.so.69.1 bin/glnxa64/libicui18n.so.69
+./install
+rm bin/glnxa64/libicuuc.so.69
+cp bin/glnxa64/libicuuc.so.69.1 bin/glnxa64/libicuuc.so.69
+./install
+rm bin/glnxa64/libexpat.so.69
+rm bin/glnxa64/libexpat.so.1
+cp bin/glnxa64/libexpat.so.1.8.4 bin/glnxa64/libexpat.so.1
+./install
+ls bin/glnxa64/ | rg libcrypt
+cp bin/glnxa64/libcrypto.so.1 bin/glnxa64/libcrypt.so.1
+./install
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+rm bin/glnxa64/libcrypt.so.1
+./install
+sudo pacman -Syy libcrypt-compat
+sudo pacman -Syy libxcrypt-compat
+rm bin/glnxa64/libunwind.so.8
+cp bin/glnxa64/libunwind.so.8.0.1 bin/glnxa64/libunwind.so.8
+./install
+]
+./install
+reboot
+sudo pacman -Syyu
+nvim .config/nushell/config.nu
+nvim .config/nushell/env.nu
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cargo doc
+cargo doc --open
+cargo check
+cog changelog
+cargo check
+cargo doc
+cargo check
+reboot
+killall firefox
+reboot
+sudo pacman -Syyu
+reboot
+inxi 
+inxi -F
+pulseaudio -k
+pulseaudio --start
+pulseaudio -k
+pulseaudio --start
+pulseaudio -k
+pulseaudio --start
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+pulseaudio -k
+pulseaudio --start
+systemctl status pulseaudio
+systemctl status pulse
+cargo install-ra
+sudo pacman -Syy manjaro-pipewire
+sudo pacman -Rs manjaro-pulse pulseaudio pulseaudio-alsa pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-rtp pulseaudio-zeroconf pulseaudio-bluetooth pulseaudio-ctl sof-firmware
+sudo pacman -Rs manjaro-pulse pulseaudio pulseaudio-alsa pulseaudio-jack pulseaudio-lirc pulseaudio-rtp pulseaudio-zeroconf pulseaudio-bluetooth pulseaudio-ctl
+sudo pacman -Rs manjaro-pulse pulseaudio pulseaudio-alsa pulseaudio-jack pulseaudio-lirc pulseaudio-rtp pulseaudio-zeroconf pulseaudio-bluetooth pulseaudio-ctl plasma-pa
+sudo pacman -S manjaro-pipewire pipewire-jack-dropin
+sudo pacman -S manjaro-pipewire
+reboot
+dyn-wall-rs -d ~/Pictures/Wallpapers/2020/Lakeside/ -p "feh --bg-scale" &
+sudo pacman -S plasma-pa
+dyn-wall-rs -d ~/Pictures/Wallpapers/2020/Lakeside/ -p "feh --bg-scale" &
+cd ~/MySources/RustProjects/rust-analyzer/
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall firefox
+killall code-insiders
+rustup update
+deno upgrade
+dyn-wall-rs -d ~/Pictures/Wallpapers/2020/Lakeside/ -p "feh --bg-scale" &
+bat /etc/fstab
+shutdown now
+killall i3
+killall i3wm
+killall i3wm-no-gaps
+reboot
+ll
+cd /mnt//base
+ll
+sudo chown -R grayjack:grayjack *
+ll
+ll -a
+sudo nvim /etc/passwd
+reboot
+sudo nvim /etc/passwd
+bat .config/nushell/config.nu
+systemctl status bluetooth
+sudo pacman -Syy
+sudo pacman-mirrors -m rank
+sudo pacman -Syy
+bat .config/nushell/config.nu
+nvim .config/nushell/config.nu
+cd Source/c2rust/
+git pull
+rustup update
+ls
+cd c2rust
+ls
+cd ..
+cargo install --git https://github.com/immunant/c2rust.git c2rust
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+VBoxManage list extpacks
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+sudo VirtualBox
+sudo pacman -Syy
+sudo mkdir -p /var/lib/pacman
+sudo pacman -Syy
+sudo mkdir -p /var/cache/pacman/pkg/
+cd `VirtualBox VMs/`
+ls
+VBoxManage modifyvm "Mac OS 12" –-cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage modifyvm "Mac OS 12" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "MacBookPro15,1"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-551B86E5744E2388"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "Mac OS 12" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+sudo pacman -Syyu
+pamac --help
+pamac install --help
+pamac install virtualbox-ext-oracle --help
+pamac install virtualbox-ext-oracle --overwrite *
+pamac --help
+pamac build virtualbox-ext-oracle --help
+pamac build virtualbox-ext-oracle
+pamac update
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+sudo pacman-mirrors -m rank
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+sudo pacman -Syyu
+sudo pacman -Su
+mkdir -p /var/lib/os-proper/mount
+/bin/mkdir -p /var/lib/os-proper/mount
+sudo /bin/mkdir -p /var/lib/os-proper/mount
+sudo mkinitcpio --help
+sudo mkinitcpio -P
+update-grub
+sudo update-grub
+ls /var/lib/os-proper/mount/
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ~/Source/mold/
+git pull
+make -j7
+cp mold ~/.local/bin/
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo run --bin setup
+cargo run -p executor -- users -u 1
+cargo run -p executor -- users -u 3
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo run -p executor -- users -u 1
+cargo run --bin setup
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+cargo run --bin setup
+cargo run -p executor -- users -u 1
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+killall code-insiders
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U visual-studio-code-insiders-1652679678-1-x86_64.pkg.tar.zst
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+cargo run -p executor -- users -u 1
+cargo run -p executor -- users -u 5
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U visual-studio-code-insiders-1652765972-1-x86_64.pkg.tar.zst
+killall code-insiders
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+deno
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+systemctl start pipewire-pulse
+sudo pacman -S pipewire-pulse
+systemctl start pipewire-pulse.service
+systemctl status pipewire-pulse.service
+systemctl --help
+systemctl list-unit-files
+cargo run --bin setup
+systemctl list-unit-files | rg pipewire
+systemctl list-unit-files | rg pipe
+sudo pacman -S pipewire-pulse
+systemctl status pipewire-pulse.service
+systemctl start /usr/lib/systemd/user/pipewire-pulse.service
+systemctl start pipewire-pulse.service
+cargo doc
+cargo test
+rustup update
+cargo test
+cargo doc
+cargo check
+cargo test
+cargo doc
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git add .
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo test
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+code-insiders .
+cargo install-ra
+cd parser-api
+cd parser/parser-api/
+cargo test
+cd ../..
+cd parser/parser-api/
+./../../scripts/local/set_environment.sh
+cd ../..
+./scripts/local/set_environment.sh
+cargo test --help
+cargo test -p parser-api
+cargo test -p parser/parser-api
+cd parser
+cargo test -p parser-api
+cd ..
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+sudo pacman -S cocogitto
+sudo pacman -R cocogitto
+cargo install --git https://github.com/cocogitto/cocogitto.git cocogitto --force
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U visual-studio-code-insiders-1652852403-1-x86_64.pkg.tar.zst
+cog bump --help
+cog bump -ad
+cog bump --help
+cog bump -md
+cog bump -pd
+cog bump -p
+rustup update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+./scripts/local/setup.sh
+cargo test -p parser/parser-api
+cd parser
+cargo test -p parser-api
+cargo clippy
+cd ..
+./scripts/local/set_environment.sh
+cd parser/
+cargo test -p parser-api
+source ./scripts/local/set_environment.sh
+zsh
+cd ..
+source ./scripts/local/set_environment.sh
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+killall code-insiders
+cargo run --bin setup
+cargo run -p executor -- users -u 5
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+opam update
+opam upgrade
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd Source
+git clone https://github.com/google/evcxr.git
+cd evcxr/
+cargo install --bin evcxr_repl evcrx_jupyter
+cargo install --bin evcxr_repl 
+cd evcxr_repl/
+cargo install-ra
+cargo install --path .
+cd ../evcxr_jupyter/
+cargo install --path .
+deno upgrade
+evcxr_jupyter --install
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+npm i -g vsce
+cd ~/MySources/AUR/janet-lang-git/
+ls
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+cd ../janet-lang/
+nvim PKGBUILD
+updtpkgsum
+zsh
+updpkgsums
+makepkg --help
+zsh
+makepkg --printsrcinfo > .SRCINFO
+zsh
+rm
+cd ~/MySources/AUR/janet-lang-git/
+cd ../janet-lang/
+rm -rf *.tar.* src pkg janet 
+git add .
+git commit
+nvim PKGBUILD
+zsh
+git commit
+git add .
+git commit
+git push
+./update-janet.sh
+git push
+cargo publish
+cd Source/mold/
+git pull
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+make -j7
+cp mold ~/.local/bin/
+cd ~/MySources/AUR/janet-lang-git/
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+co ../../RustProjects/janetrs/rustfmt.toml .
+cp ../../RustProjects/janetrs/rustfmt.toml .
+git tag --force staging
+git push --force --tags
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+rustup update
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+killall code-insiders
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+rustup update
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+julia -q --project
+cd ..
+ls
+cd TestGUICompiled/
+ls
+cd bin
+ls
+cd ../lib/
+ls
+cd ../share/
+ls
+cd ../bin
+ls
+/bin/ls -la
+cd ../
+ls
+cd ..
+julia -q --project
+cp `Projeto 2.2/Manifest.toml` .
+julia -q --project
+ls
+rm TestGUICompiled/
+rm -rf TestGUICompiled/
+ls
+sudo pacman -Syy
+sudo pacman -S ninja
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+reboot
+htop
+deno upgrade
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+code-insiders --install-extension ./editors/code/rust-analyzer.vsix --force
+git stash
+cog bump --help
+cog bump -d -a
+cog bump -a
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+julia src/gui.jl
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+killall code-insiders
+                                                                                                       cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+juliaup update
+juliaup status
+juliaup --help
+juliaup update
+juliaup config --help
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+c2rust --help
+cd ../../Academics/ProgEstruturada/DesafioMatrizes/
+ls
+rm main.rs
+c2rust --help
+c2rust transpile --help
+c2rust transpile main.c
+ls
+c2rust transpile compile_commands.json
+ls
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+rustup update
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -U visual-studio-code-insiders-1654148418-1-x86_64.pkg.tar.zst
+killall code-insiders
+deno upgrade
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+systemctl status bluetooth
+sudo pacman -Syyu bluez
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+reboot
+killall code-insiders
+killall firefox
+reboot
+setxkbmap -layout us
+mvim ~/.config/i3/config
+nvim ~/.config/i3/config
+echo 2 > /sys/module/hid_apple/parameters/fnmode
+setxkbmap --help
+localctl list-x11-kaymap-variant us
+localectl list-x11-kaymap-variant us
+localectl list-x11-kaymap-variants us
+localectl list-x11-keymap-variants us
+setxkbmap -layout us,br
+setxkbmap -layout us,br -variant mac
+setxkbmap -layout us,br -variant altgr-intl
+setxkbmap -layout us,br -variant symbolic
+setxkbmap -layout us\ -variant symbolic
+setxkbmap -layout us -variant symbolic
+setxkbmap -layout us -variant mac
+killall code-insiders
+setxkbmap -model pc104 -layout us -variant mac
+setxkbmap -model pc104 -layout us -variant altgr-intl
+localectl list-x11-keymap-variants us
+localectl list-x11-keymap-options
+localectl list-x11-keymap-variants us
+setxkbmap -model pc104 -layout us -variant symbolic
+cd Documents/Empresa/
+ls
+localectl list-x11-keymap-variants us
+setxkbmap -model pc104 -layout us -variant intl
+localectl list-x11-keymap-models
+localectl list-x11-keymap-layouts
+localectl list-x11-keymap-variants us
+reboot
+localectl list-x11-keymap-variants us
+setxkbmap -model pc104 -layout us -variant altgr-intl
+nvim ~/.config/i3/config
+localectl list-x11-keymap-models
+killall code-insiders
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+localectl list-x11-keymap-variants us
+localectl list-x11-keymap-options
+bat /usr/share/X11/xkb/rules/base.lst
+setxkbmap -model pc104 -layout us -variant intl
+nvim ~/.config/i3/config
+cargo run -p executor -- users -u 5
+cargo run --bin setup
+cargo run -p executor -- users -u 5
+cargo run --bin setup
+cargo run -p executor -- users -u 5
+cargo run -p executor -- users -u 3
+cargo clean
+cargo run --bin setup
+cargo run -p executor -- users -u 5
+docker-compose up
+modprobe hid_magicmouse scroll_acceleration=1 scroll_speed=55
+sudo modprobe hid_magicmouse scroll_acceleration=1 scroll_speed=55
+nvim /etc/modprobe.d/hid_magicmouse.conf
+sudo nvim /etc/modprobe.d/hid_magicmouse.conf
+cargo update
+cargo build
+cargo test
+cog bump -a -d
+cog bump -p -d
+cog bump -p
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo run --bin setup
+cargo run -p executor -- users -u 5
+git tag --force staging
+git push --force --tags
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+sudo pacman -Syy discord
+rm -rf target
+printenv > /tmp/tmp-10064171ROzsmORH2qtxt
+git pull
+bat .git/config
+rustup update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+git pull
+git push
+ls .git/hooks/
+bat .git/hooks/pre-push
+git push --no-verify
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+deno upgrade
+40 * 30
+100000 / 1200
+84 / 12
+rm -rf *.tar.* src pkg janet 
+makepkg -i
+rm -rf *.tar.* src pkg janet ]
+rm -rf *.tar.* src pkg janet
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+deno upgrade
+cargo install-ra
+git push --force
+sudo pacman -Syyu]
+sudo pacman -Syyu
+bat .config/i3/config
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg
+sudo lshw -c video
+sudo inxi -F
+xrand --help
+xrand
+xrandr --help
+xrandr
+nvidia-xconfig 
+reboot
+xrandr -s
+xrandr -s #
+xrandr
+xrandr -s HDMI-1
+cvt
+cvt 3440 1440 100
+xrandr --newmode "3440x1440_100.00"  728.00  3440 3728 4104 4768  1440 1443 1453 1527 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_100.00
+xrandr
+lswd
+xrandr --output HDMI-1 --mode 3440x1440_100.00
+cvt 3440 1440 60
+xrandr --newmode "3440x1440_60.00"  419.50  3440 3696 4064 4688  1440 1443 1453 1493 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_60.00
+xrandr --output HDMI-1 --mode 3440x1440_60.00
+xrandr --output HDMI-1 --mode 2560x1080 --rate 100
+xrandr
+xrandr --output HDMI-1 --mode 1920x1080 --rate 120
+xrandr --output HDMI-1 --mode 3440x1440_100.00
+xrandr --output HDMI-1 --mode 3440x1440
+cvt 3440 1440
+cvt 3440 1440 100
+cvt --help
+3440 / 8
+cvt 3440 1440 100
+xrandr --output HDMI-1 --mode 3440x1440
+xrandr --output HDMI-1 --mode 3440x1440_100.00
+2560 / 8
+328 * 8
+429 * 8
+cvt 3432 1440 100
+xrandr --newmode "3432x1440_100.00"  726.75  3432 3720 4096 4760  1440 1443 1453 1527 -hsync +vsync
+xrandr
+reboot
+xrandr
+xrandr --newmode "3440x1440_60.00"  419.50  3440 3696 4064 4688  1440 1443 1453 1493 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_60.00
+xrandr --output HDMI-1 --mode 3440x1440_60.00
+xrandr --help
+xrandr --output HDMI-1 --auto
+cvt 2560 1440 120
+xrandr --newmode "2560x1440_120.00"  661.25  2560 2784 3064 3568  1440 1443 1448 1545 -hsync +vsync
+xrandr --newmode "2560x1440"  661.25  2560 2784 3064 3568  1440 1443 1448 1545 -hsync +vsync
+xrandr --addmode HDMI-1 2560x1440
+xrandr --output HDMI-1 --mode 2560x1440
+xrandr
+xrandr --newmode "2560x1440"  661.25  2560 2784 3064 3568  1440 1443 1448 1545 -hsync +vsync
+xrandr --addmode HDMI-1 2560x1440
+xrandr --output HDMI-1 --mode 2560x1440
+reboot
+xrandr
+xrandr --newmode "2560x1440"  661.25  2560 2784 3064 3568  1440 1443 1448 1545 -hsync +vsync
+xrandr --addmode HDMI-1 2560x1440
+xrandr --output HDMI-1 --mode 2560x1440
+xrandr --output HDMI-1 --mode 2560x1440 --crtc 2
+xrandr
+cvt 2560 1440 60
+xrandr --newmode "2560x1440_60.00"  312.25  2560 2752 3024 3488  1440 1443 1448 1493 -hsync +vsync
+xrandr --addmode HDMI-1 2560x1440_60.00
+xrandr --output HDMI-1 --mode 2560x1440_60.00
+xrandr --output HDMI-1 --mode 2560x1440
+cvt 3440 1440 100
+xrandr --newmode "3440x1440_100.00"  728.00  3440 3728 4104 4768  1440 1443 1453 1527 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_100.00
+xrandr --output HDMI-1 --mode 3440x1440_100.00
+xrandr --newmode "3440x1440_60.00"  419.50  3440 3696 4064 4688  1440 1443 1453 1493 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_60.00
+xrandr --output HDMI-1 --mode 3440x1440_6]0.00
+xrandr --output HDMI-1 --mode 3440x1440_60.00
+nvim ~/.config/i3/config
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cvt 3440 1440 75
+xrandr --newmode "3440x1440_75.00"  532.75  3440 3704 4080 4720  1440 1443 1453 1506 -hsync +vsync
+cargo install-ra
+xrandr --addmode HDMI-1 3440x1440_75.00
+xrandr --output HDMI-1 --mode 3440x1440_75.00
+xrandr --output HDMI-1 --mode 3440x1440_75.00 --crtc 2
+xrandr --output HDMI-1 --mode 3440x1440_75.00 --crtc 3
+xrandr --output HDMI-1 --mode 3440x1440_75.00 --crtc 0
+cvt 3440 1440 68
+xrandr --output HDMI-1 --mode 3440x1440_75.00
+cvt 3440 1440 45
+xrandr
+cvt 3440 1440 50
+xrandr --newmode "3440x1440_50.00"  344.00  3440 3672 4040 4640  1440 1443 1453 1484 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_50.00
+xrandr --output HDMI-1 --mode 3440x1440_50.00
+xrandr --output HDMI-1 --mode 3440x1440_50.00 --crtc 2
+xrandr --output HDMI-1 --mode 3440x1440_50.00
+xrandr
+xrandr --output HDMI-1 --mode 3440x1440
+xrandr --newmode "3440x1440"  532.75  3440 3704 4080 4720  1440 1443 1453 1506 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440
+xrandr --output HDMI-1 --mode 3440x1440
+xrandr
+xrandr --newmode "3440x1440"  344.00  3440 3672 4040 4640  1440 1443 1453 1484 -hsync +vsync
+cargo check
+cd Desktop/
+wget https://scontent.cdninstagram.com/v/t50.16885-16/286577131_395170622660593_9047770173542596648_n.mp4?efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5pZ3R2LmJhc2VsaW5lIiwicWVfZ3JvdXBzIjoiW1wiaWdfd2ViX2RlbGl2ZXJ5X3Z0c19vdGZcIl0ifQ&_nc_ht=instagram.fcgh3-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=3GSxhypQRKMAX9YS-nq&edm=ALQROFkBAAAA&vs=384073013757019_4101201241&_nc_vs=HBkcFQAYJEdPdlJGQkh4MzViVVoyY0JBQ2lBWVNNSkk1QjlidlZCQUFBRhUAAsgBACgAGAAbAYgHdXNlX29pbAExFQAAJsST%2BevtguJAFQIoAkMzLBdAQiqfvnbItBgSZGFzaF9iYXNlbGluZV8xX3YxEQB17AcA&ccb=7-5&oe=62AA1B7C&oh=00_AT9SA5cIjEwJC0NzqaHLebTRoMikiNt4W9v1la5X_ClTJQ&_nc_sid=30a2ef
+inxi -F
+cvt 3440 1440 30
+xrandr --newmode "3440x1440_30.00"  196.25  3440 3600 3952 4464  1440 1443 1453 1468 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_30.00
+xrandr --output HDMI-1 --mode 3440x1440_30.00
+cvt 3440 1440 45
+xrandr --newmode "3440x1440_45.00"  306.75  3440 3664 4024 4608  1440 1443 1453 1480 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_45.00
+xrandr --output HDMI-1 --mode 3440x1440_45.00
+cvt 3440 1440 35
+xrandr --newmode "3440x1440_35.00"  233.00  3440 3624 3984 4528  1440 1443 1453 1472 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_35.00
+xrandr --output HDMI-1 --mode 3440x1440_35.00
+cvt 3440 1440 40
+xrandr --newmode "3440x1440_40.00"  270.00  3440 3648 4008 4576  1440 1443 1453 1476 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_40.00
+xrandr --output HDMI-1 --mode 3440x1440_40.00
+cvt 3440 1440 42
+xrandr --newmode "3440x1440_42.00"  284.75  3440 3656 4016 4592  1440 1443 1453 1478 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_42.00
+xrandr --output HDMI-1 --mode 3440x1440_42.00
+cvt 3440 1440 44
+xrandr --newmode "3440x1440_44.00"  299.75  3440 3664 4024 4608  1440 1443 1453 1479 -hsync +vsync
+xrandr --addmode HDMI-1 3440x1440_44.00
+xrandr --output HDMI-1 --mode 3440x1440_44.00
+sudo inxi -F
+man x11.conf
+man x11
+man X11
+zsh
+xrandr --newmode "2560x1440_120.00"  661.25  2560 2784 3064 3568  1440 1443 1448 1545 -hsync +vsync
+xrandr
+cvt 1920 1080 120
+sudo nvim /etc/X11/xorg.conf.d/10-ultrawide.conf
+reboot
+cd ~/MySources/RustProjects/rust-analyzer/
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet
+makepkg -i
+killall code-insiders
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet
+makepkg -i
+killall code-insiders
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+rustup update
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet
+makepkg -i
+killall code-insiders
+cd ~/MySources/AUR/janet-lang-git/
+ls
+rm -rf *.tar.* src pkg janet
+ls
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+sudo pacman -Syy jdk
+vsce package
+npm i -g vsce
+cp ../coreutils/LICENSE .
+vsce package
+code-insiders --install-extension monokai-grayjack-0.12.5.vsix
+vsce publish -p fifqvo67epxt4jxcnez6fgz4smahwr2ihx4f7o7cyxsqngmtgubq
+man rustc
+rustc --help
+cargo build
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+deno upgrade
+killall code-insiders
+cargo clean
+13 * 5
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+4886.88 - 133.32
+4886.88 - 133.32 - 500
+cd ~/Source/mold/
+git pull
+make clean
+make -j7
+cp mold ~/.local/bin/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/MySources/RustProjects/rbitset/
+cargo build --jobs 4
+cargo build --help
+cargo check --help
+cargo clippy --help
+nvim ~/.cargo/config
+cd ~/MySources/RustProjects/rust-analyzer/
+cargo clean
+cargo install-ra
+nvim ~/.cargo/config
+cargo install-ra
+killall code-insiders
+killall firefox
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cd ~/Source/AUR/visual-studio-code-insiders/
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cargo run --bin setup
+cargo run --bin executor --help
+cargo run --bin executor -- --help
+cargo run -p executor -- --help
+cargo run -p executor -- video --help
+cargo run -p executor -- video https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/MySources/AUR/janet-lang-git/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cd ../janet-lang/
+nvim PKGBUILD
+updpkgsums
+rm -rf *.tar.* src pkg janet jpm
+ls
+makepkg --printsrcinfo > .SRCINFO
+zsh
+git add .
+git commit
+git push
+./update-janet.sh
+cargo publish
+rustup target install thumbv7m-none-eabi
+sudo pacman -Syy openocd
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+sudo pacman -Syy stlink
+cd MySources/Academics/
+mkdir ProgSoftwareEmbarcado
+cd ProgSoftwareEmbarcado/
+cargo new --bin test
+cargo new --bin st32test
+cargo build
+openocd --help
+openocd -f interface/stlink-v3.cfg -f target/stm32f1x.cfg
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
+openocd
+sudo pacman -S arm-none-eabi-gdb qemu-arch-extra
+sudo pacman -S arm-none-eabi-gdb
+sudo nvim /etc/udev/rules.d/70-st-link-rules
+sudo udevadm control --reload-rules
+lsusb
+getfacl /dev/bus/usb/001/014
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
+openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
+lsof -i :6666
+lsof -i :4444
+openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
+telnet
+openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
+cargo build
+openocd -f interface/stlink-v2.cfg -f stm32f1x.cfg
+openocd -f interface/stlink.cfg -f stm32f1x.cfg
+zsh
+gdb -q ~/.cargo/target/thumbv7m-none-eabi/debug/st32test
+sudo pacman -Sd gdb
+sudo pacman -Ss\ gdb
+sudo pacman -Ss gdb
+openocd -f interface/stlink.cfg -f stm32f1x.cfg
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+sudo pacman -Syyu
+cd ~/MySources/RustProjects/rust-analyzer/
+rustup update
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+killall code-insiders
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/tv/CddLm9yjO3-/
+sudo nvim /usr/local/bin/plasma-i3.sh
+sudo chmod +x /usr/local/bin/plasma-i3.sh
+sudo nvim /usr/share/xsessions/plasma-i3.desktop
+reboot
+sudo nvim /usr/local/bin/kde-i3-env.sh
+sudo cp  /usr/local/bin/kde-i3-env.sh $env.HOME/.config/plasma-workspace/env
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg &
+sudo nvim /etc/environment
+killall i3wm-no-gaps
+killall i3wm
+killall i3
+picom --help
+killall i3
+killall picom
+picom -bc --config .config/i3/picon.config
+killall picom
+picom -bc --config .config/i3/picon.config
+killall picom
+picom -bc --config .config/i3/picon.config
+cd ~/MySources/RustProjects/rust-analyzer/
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg &
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+cd ~/Source/AUR/visual-studio-code-insiders/
+makepkg -i
+killall picom
+picom -bc --config .config/i3/picon.config
+killall picom
+picom -bc --config .config/i3/picon.config
+killall picom
+picom -bc --config .config/i3/picon.config
+killall picom
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg &
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg
+nvim .config/i3/config
+notify-send "test"
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cat ~/Desktop/loggedout.html | rg "video_url"
+killall slack
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg
+killall i3
+xrandr --help
+killall picom
+curl 'https://i.instagram.com/api/v1/media/2861558048198991180/info/' \
+  -H 'authority: i.instagram.com' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'cookie: mid=YrSa3wAEAAGp2WF56IYj81KmzQuM; ig_did=7FFAD055-C6CB-433A-81F6-E180FF7158CD; ig_nrcb=1; datr=iKG0YksPzycoViPnDUlAJZEN; csrftoken=hkP9H3dU11ORxHRRmmV0efGp7yGaOaTc; ds_user_id=53487318359; sessionid=53487318359%3Ab8dEndrvDoT88g%3A4; rur="NCG\05453487318359\0541687617597:01f79bcc486a86c9ea127b3df12271b9841e720a99b240b5af01a6eaac739f90815a7fe0"' \
+  -H 'origin: https://www.instagram.com' \
+  -H 'referer: https://www.instagram.com/' \
+  -H 'sec-ch-ua: "Chromium";v="103", ".Not/A)Brand";v="99"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Safari/537.36' \
+  -H 'x-asbd-id: 198387' \
+  -H 'x-csrftoken: hkP9H3dU11ORxHRRmmV0efGp7yGaOaTc' \
+  -H 'x-ig-app-id: 936619743392459' \
+  -H 'x-ig-www-claim: hmac.AR2s8HLvoe37FAxhI3uwCks79MhbbnW8gL2440X-GT6oxt2R' \
+xrandr --output HDMI-1 --mode 3440x1440
+killall picom
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+killall picom
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+killall picom
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+killall picom
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+sudo pacman -U ./visual-studio-code-insiders-1656567894-1-x86_64.pkg.tar.zst
+killall code-insiders
+rustup update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+bat .git/config
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+7980,69 - 1022.86
+7980.69 - 1022.86
+3787.91 - 1500
+3787.91 - 1700
+6957.83 - 2287.91
+4000 * 12
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+deno upgrade
+killall picom
+feh --bg-scale ~/Pictures/Wallpapers/test.jpg
+sudo pacman -Syyu
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+sudo pacman -Syyu
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm
+makepkg -i
+killall code-insiders
+cargo install --git https://github.com/immunant/c2rust.git c2rust --force
+rustup update
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+killall picom
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+killall picom
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+killall picom
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+killall picom
+cd Source/
+git clone https://aur.archlinux.org/leftwm.git
+cd leftwm/
+makepkg -i
+nvim PKGBUILD
+rm -rf *.tar.* src pkg janet jpm
+ls
+rm -rf *.tar.* src pkg janet jpm leftwm
+makepkg -i
+cd leftwm
+cd ..
+ls
+cd src/leftwm/release/
+ls
+rm -rf *.tar.* src pkg janet jpm leftwm
+nvim PKGBUILD
+cd ..
+cd ../..
+nvim PKGBUILD
+rm -rf *.tar.* src pkg janet jpm leftwm
+makepkg -i
+leftwm-check 
+killall picom
+cargo run --bin setup
+cargo run -p executor -- video --url https://www.instagram.com/p/CenzJh1jZQl/
+cargo run -p executor -- video --url https://www.instagram.com/p/CceRaRRDtSh/
+git pull
+light
+light --help
+light -U 5
+amixer
+amixer -q set Master -q 5%+
+amixer --help
+amixer et Master -q 5%+
+amixer set Master -q 5%+
+light
+light --help
+light L
+light -L
+light -s sysfs/backlight/intel_backlight -U 5
+light -N 10
+light
+playerctl
+sudo pacman -Syy playerctl
+xprop
+notify-send "test"
+xprop
+leftwm-theme update
+leftwm-check 
+sudo pacman -S polybar
+cd Source/
+git clone https://github.com/di-effe/catppuccin.git
+cd catppuccin/
+ls
+cd conf/
+ls
+dunst --help
+ln -s ~/.config/leftwm/themes/catppuccin/ ~/.config/leftwm/themes/current
+rofi --help
+ls
+chmod +x up
+chmod +x down
+sudo pacman -S bluez
+sudo pacman -S bluez-utils
+nm-tui
+inxi -F
+killall leftwm
+killall picom
+cargo install --git https://github.com/leftwm/leftwm-theme/ leftwm-theme
+leftwm-theme list
+leftwm-theme install catppuccin
+leftwm-theme install "Catppuccin"
+leftwm-theme update
+leftwm-theme list
+leftwm-theme apply catppuccin
+/usr/bin/env
+/usr/bin/env bash
+killall picom
+picom -bc --config .config/leftwm/themes/catppuccin/conf/picom.config
+ll
+./up
+leftwm-theme apply catppuccin
+bat /etc/environment
+echo XDG_CURRENT_DESKTOP
+echo $XDG_CURRENT_DESKTOP
+killall picom
+nm-tui
+reboot
+killall picom
+cd Source/
+git clone https://aur.archlinux.org/leftwm-git.git
+cd leftwm
+cd ../leftwm-git/
+nvim PKGBUILD
+cd Source/leftwm-git/
+bat PKGBUILD
+makepkg -i
+killall leftwm
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cd ~/Source/AUR/visual-studio-code-insiders/
+rm -rf *.tar.* src pkg janet jpm leftwm
+makepkg -i
+8159,26 - 1000 - 4
+8159.26 - 1000 - 4
+7155.26 / 2
+8159.26 - 1000 - 8
+7151.26 / 2
+8237.86 / 2
+cd ~/MySources/RustProjects/rust-analyzer/
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+cargo install-ra
+git pull
+cal
+git pull
+git pull https://github.com/rust-analyzer/rust-analyzer.git
+reboot
+smbclient -L erics-macbook-pro
+cd ~/MySources/RustProjects/rust-analyzer/
+code-insiders .
